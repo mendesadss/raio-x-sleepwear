@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Cooling Short Set — Noctura</title>
+<style>
+  :root{--ink:#14213A;--teal:#3E8E8A;--blush:#E8C4C0;--cream:#F6F1EA;--text:#22252B;--muted:#6b7280;--line:#e6ddd2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Georgia',serif;color:var(--text);background:#fff;line-height:1.55}
+  .sans{font-family:'Helvetica Neue',Arial,sans-serif}
+  .ph{background:linear-gradient(135deg,#dfeceb,#efe2df);border:1px dashed #b9c9c7;display:flex;align-items:center;justify-content:center;text-align:center;color:#5b7573;font-size:12px;font-family:Arial,sans-serif;padding:12px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .ann{background:var(--teal);color:#fff;text-align:center;padding:8px;font-family:Arial,sans-serif;font-size:12.5px;letter-spacing:.04em}
+  header{background:var(--ink);color:#fff}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1180px;margin:0 auto}
+  .logo{font-family:Arial,sans-serif;font-weight:800;letter-spacing:.22em;font-size:19px}
+  nav.top a{color:#dfe6ef;text-decoration:none;margin-left:26px;font-family:Arial,sans-serif;font-size:13px}
+  .burger{display:none;font-size:22px;cursor:pointer}
+  .crumb{font-family:Arial,sans-serif;font-size:12px;color:var(--muted);padding:16px 0}
+  /* PDP layout */
+  .pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;padding-bottom:20px}
+  .gallery .ph{height:440px;border-radius:10px;margin-bottom:12px}
+  .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .thumbs .ph{height:78px;border-radius:6px}
+  .info h1{font-size:30px;color:var(--ink);font-weight:400;margin-bottom:8px}
+  .stars{font-family:Arial,sans-serif;font-size:13px;color:var(--muted);margin-bottom:16px}
+  .price{font-family:Arial,sans-serif;font-size:26px;color:var(--ink);font-weight:700;margin-bottom:6px}
+  .price s{color:#b9b0a4;font-weight:400;font-size:19px;margin-left:8px}
+  .price .save{background:var(--blush);color:var(--ink);font-size:12px;padding:3px 9px;border-radius:20px;margin-left:8px;vertical-align:middle}
+  .desc{color:var(--muted);font-size:15px;margin:16px 0 22px}
+  .opt{font-family:Arial,sans-serif;margin-bottom:18px}
+  .opt .lbl{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);font-weight:700;margin-bottom:8px}
+  .chips{display:flex;gap:9px;flex-wrap:wrap}
+  .chip{border:1px solid var(--line);border-radius:3px;padding:9px 16px;font-size:14px;cursor:pointer;background:#fff}
+  .chip.on{border-color:var(--ink);background:var(--ink);color:#fff}
+  .sw{width:30px;height:30px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line);cursor:pointer}
+  .atc{display:block;width:100%;background:var(--ink);color:#fff;text-align:center;font-family:Arial,sans-serif;font-weight:700;letter-spacing:.06em;font-size:15px;padding:18px;border:0;border-radius:3px;cursor:pointer;margin-top:6px}
+  .bump{border:1px dashed var(--teal);border-radius:6px;padding:12px 14px;display:flex;align-items:center;gap:12px;margin:16px 0;font-family:Arial,sans-serif;font-size:13.5px;background:#f2f8f7}
+  .bump .ph{width:52px;height:52px;border-radius:6px;flex:none}
+  .free{font-family:Arial,sans-serif;font-size:13px;color:var(--teal);text-align:center;margin-top:10px}
+  /* objection killers */
+  .kills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px;font-family:Arial,sans-serif;font-size:12.5px;text-align:center;color:var(--ink)}
+  .kills div{background:var(--cream);border-radius:8px;padding:14px 8px}
+  .kills b{display:block;font-size:20px;margin-bottom:4px}
+  /* review + faq */
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  h2{font-size:26px;color:var(--ink);font-weight:400;text-align:center;margin-bottom:8px}
+  .lead{text-align:center;color:var(--muted);max-width:52ch;margin:0 auto 30px}
+  .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .rev{background:var(--cream);border-radius:10px;padding:20px}
+  .rev .st{color:var(--teal);font-family:Arial,sans-serif;font-size:13px;margin-bottom:8px}
+  .rev p{font-size:14px}.rev .who{font-family:Arial,sans-serif;font-size:12px;color:var(--muted);margin-top:10px}
+  .faq{max-width:760px;margin:0 auto}
+  .faq .q{border-bottom:1px solid var(--line);padding:16px 0}
+  .faq .q b{font-family:Arial,sans-serif;font-size:15px;color:var(--ink);display:block;margin-bottom:6px}
+  .faq .q p{font-size:14px;color:var(--muted)}
+  footer{background:#0e1830;color:#9fb0c4;font-family:Arial,sans-serif;font-size:13px;padding:30px 0;text-align:center}
+  @media(max-width:760px){
+    nav.top{display:none}.burger{display:block}
+    .pdp{grid-template-columns:1fr;gap:22px}.gallery .ph{height:340px}
+    .kills{grid-template-columns:repeat(2,1fr)}.revs{grid-template-columns:1fr}
+    h1{font-size:25px}
+  }
+</style></head>
+<body>
+<div class="ann sans">☁ Free shipping over $99 · 60-night sleep trial</div>
+<header><div class="bar">
+  <span class="burger sans">☰</span>
+  <span class="logo">NOCTURA</span>
+  <nav class="top"><a href="#">Cooling Sets</a><a href="#">Nightgowns</a><a href="#">The Science</a><a href="#">Gifts</a></nav>
+  <a href="#" class="sans" style="color:#fff;text-decoration:none;font-size:13px">Cart (0)</a>
+</div></header>
+
+<div class="wrap">
+  <div class="crumb sans">Home / Cooling Sets / The Cooling Short Set</div>
+  <div class="pdp">
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="ph">IMAGEM · The Cooling Short Set vestido, mulher 45+, luz natural fria</div>
+      <div class="thumbs">
+        <div class="ph">detalhe tecido</div><div class="ph">costas</div><div class="ph">macro punho</div><div class="ph">dobrado</div>
+      </div>
+    </div>
+    <!-- INFO -->
+    <div class="info">
+      <h1>The Cooling Short Set</h1>
+      <div class="stars sans">★★★★★ 4.8 · 1,240 reviews</div>
+      <div class="price sans">$89 <s>$118</s> <span class="save">Save $29</span></div>
+      <p class="desc">The moisture-wicking short set hot sleepers reorder. Pulls the sweat away, dries 4× faster than cotton, and stays cool to the touch, wash after wash. Cut to skim without clinging.</p>
+
+      <div class="opt">
+        <div class="lbl">Color</div>
+        <div class="chips">
+          <span class="sw" style="background:#14213A" title="Midnight"></span>
+          <span class="sw" style="background:#E8C4C0" title="Blush"></span>
+          <span class="sw" style="background:#8aa6a2" title="Sage"></span>
+          <span class="sw" style="background:#efe7db" title="Oat"></span>
+        </div>
+      </div>
+      <div class="opt">
+        <div class="lbl">Size</div>
+        <div class="chips"><span class="chip">XS</span><span class="chip on">S</span><span class="chip">M</span><span class="chip">L</span><span class="chip">XL</span><span class="chip">2X</span></div>
+      </div>
+
+      <div class="bump sans"><div class="ph">🎁</div><div><b>Add a silk sleep mask</b> — complete the cooling ritual. <b style="color:var(--teal)">+$15</b> <span style="color:var(--muted)">(reg. $24)</span></div></div>
+
+      <button class="atc">ADD TO CART · $89</button>
+      <div class="free sans">✓ You've unlocked FREE shipping · 60-night sleep trial · Ships in 1–2 days from the USA</div>
+
+      <div class="kills">
+        <div><b>❄</b>Cool after<br>50 washes</div>
+        <div><b>🌿</b>No pilling,<br>no thinning</div>
+        <div><b>↩</b>60-night<br>trial</div>
+        <div><b>🇺🇸</b>Ships from<br>the USA</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section><div class="wrap">
+  <h2>1,240 hot sleepers, one full night of sleep</h2>
+  <p class="lead">Real reviews from women who stopped waking up drenched.</p>
+  <div class="revs">
+    <div class="rev"><div class="st sans">★★★★★</div><p>"First full night of sleep in two years. I stopped waking up soaked at 3am."</p><div class="who">Karen M. · 52 · verified</div></div>
+    <div class="rev"><div class="st sans">★★★★★</div><p>"I run so hot. These actually stay cool and don't cling when I sweat. Bought two more."</p><div class="who">Denise R. · 47 · verified</div></div>
+    <div class="rev"><div class="st sans">★★★★★</div><p>"Soft, not frumpy. Washed 20 times, no pilling. Gave one to my mom for menopause."</p><div class="who">Alyssa T. · 44 · verified</div></div>
+  </div>
+</div></section>
+
+<!-- FAQ / objection killers -->
+<section><div class="wrap">
+  <h2>Before you ask</h2>
+  <div class="faq">
+    <div class="q"><b>Does the cooling wear off after washing?</b><p>No. Unlike sprayed-on treatments, the cooling is in the fabric structure itself. Lab-tested to stay cool to the touch after 50+ washes.</p></div>
+    <div class="q"><b>Is this real bamboo or rayon that traps heat?</b><p>Certified bamboo viscose, breathable weave. Full composition on the label, nothing hidden. It releases heat instead of holding it.</p></div>
+    <div class="q"><b>Will it pill or go thin?</b><p>Engineered against pilling and thinning, the #1 complaint with cheap bamboo. Backed by our 60-night trial: sleep in it, wash it, and if it lets you down, send it back.</p></div>
+    <div class="q"><b>How does the fit run?</b><p>True to size with a relaxed, skims-without-clinging cut. See the size guide; when between sizes, size down for a closer fit.</p></div>
+  </div>
+</div></section>
+
+<footer>NOCTURA · Cooling sleepwear for hot sleepers &amp; menopause nights · 60-night trial · Ships from the USA</footer>
+</body></html>

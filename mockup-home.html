@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Noctura — Cooling Sleepwear</title>
+<style>
+  :root{--ink:#14213A;--teal:#3E8E8A;--blush:#E8C4C0;--cream:#F6F1EA;--text:#22252B;--muted:#6b7280;--line:#e6ddd2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Georgia',serif;color:var(--text);background:var(--cream);line-height:1.55}
+  .sans{font-family:'Helvetica Neue',Arial,sans-serif}
+  img,.ph{max-width:100%}
+  .ph{background:linear-gradient(135deg,#dfeceb,#efe2df);border:1px dashed #b9c9c7;display:flex;align-items:center;justify-content:center;text-align:center;color:#5b7573;font-size:12px;font-family:Arial,sans-serif;padding:12px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  /* header */
+  header{background:var(--ink);color:#fff}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1180px;margin:0 auto}
+  .logo{font-family:Arial,sans-serif;font-weight:800;letter-spacing:.22em;font-size:19px}
+  nav.top a{color:#dfe6ef;text-decoration:none;margin-left:26px;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.04em}
+  .burger{display:none;font-size:22px;cursor:pointer}
+  .ann{background:var(--teal);color:#fff;text-align:center;padding:8px;font-family:Arial,sans-serif;font-size:12.5px;letter-spacing:.04em}
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:0;align-items:stretch}
+  .hero .copy{padding:64px 48px;background:var(--cream)}
+  .hero .ph{min-height:460px}
+  .eyebrow{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:16px}
+  h1{font-size:44px;line-height:1.12;color:var(--ink);margin-bottom:18px;font-weight:400}
+  h1 b{font-style:italic;color:var(--teal)}
+  .sub{font-size:17px;color:var(--muted);margin-bottom:26px;max-width:34ch}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-weight:700;letter-spacing:.06em;font-size:14px;padding:16px 34px;border-radius:2px}
+  .btn.teal{background:var(--teal)}
+  .rat{margin-top:20px;font-family:Arial,sans-serif;font-size:13px;color:var(--muted)}
+  .rat b{color:var(--ink)}
+  /* trust bar */
+  .trust{background:var(--ink);color:#eaf0f6;font-family:Arial,sans-serif}
+  .trust .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:14px;padding:16px 22px;font-size:12.5px;letter-spacing:.05em;text-align:center}
+  .trust span b{color:var(--blush)}
+  /* section */
+  section{padding:60px 0}
+  .kick{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:700;text-align:center;margin-bottom:12px}
+  h2{font-size:32px;color:var(--ink);text-align:center;font-weight:400;margin-bottom:10px}
+  .lead{text-align:center;color:var(--muted);max-width:56ch;margin:0 auto 40px}
+  .mech{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .mech .card{text-align:center}
+  .mech .ph{height:150px;border-radius:6px;margin-bottom:16px}
+  .mech h3{font-family:Arial,sans-serif;font-size:16px;color:var(--ink);margin-bottom:8px}
+  .mech p{font-size:14px;color:var(--muted)}
+  /* products */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .prod .ph{height:300px;border-radius:8px;margin-bottom:14px}
+  .prod h3{font-family:Arial,sans-serif;font-size:15px;color:var(--ink);font-weight:600}
+  .prod .pr{font-family:Arial,sans-serif;color:var(--teal);font-weight:700;margin-top:4px}
+  .prod .pr s{color:#b9b0a4;font-weight:400;margin-left:6px}
+  /* gift band */
+  .gift{background:var(--blush)}
+  .gift .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .gift .ph{height:280px;border-radius:8px}
+  .gift h2{text-align:left}
+  .gift .lead{text-align:left;margin:0 0 22px}
+  /* quote */
+  .quote{background:var(--ink);color:#fff;text-align:center}
+  .quote p{font-size:24px;font-style:italic;max-width:40ch;margin:0 auto 14px;line-height:1.4}
+  .quote .who{font-family:Arial,sans-serif;font-size:13px;color:var(--blush);letter-spacing:.05em}
+  /* footer */
+  footer{background:#0e1830;color:#9fb0c4;font-family:Arial,sans-serif;font-size:13px;padding:40px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  footer b{color:#fff;display:block;margin-bottom:10px;letter-spacing:.04em}
+  footer a{color:#9fb0c4;text-decoration:none;display:block;margin-bottom:6px}
+  @media(max-width:760px){
+    nav.top{display:none}.burger{display:block}
+    .hero{grid-template-columns:1fr}.hero .copy{padding:40px 22px;order:2}.hero .ph{min-height:320px;order:1}
+    h1{font-size:32px}.mech,.grid{grid-template-columns:1fr}.gift .wrap{grid-template-columns:1fr}
+    .gift h2,.gift .lead{text-align:center}.quote p{font-size:19px}
+    .trust .wrap{gap:8px;font-size:11px}
+  }
+</style></head>
+<body>
+<div class="ann sans">☁ Free shipping over $99 · 60-night sleep trial · Ships from the USA</div>
+<header>
+  <div class="bar">
+    <span class="burger sans">☰</span>
+    <span class="logo">NOCTURA</span>
+    <nav class="top"><a href="#">Cooling Sets</a><a href="#">Nightgowns</a><a href="#">The Science</a><a href="#">Gifts</a><a href="#">Reviews</a></nav>
+    <a href="#" class="sans" style="color:#fff;text-decoration:none;font-size:13px">Cart (0)</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="copy">
+    <div class="eyebrow">For hot sleepers &amp; menopause nights</div>
+    <h1>Wake up at 3AM<br><b>drenched in sweat?</b><br>Your pajamas are the reason.</h1>
+    <p class="sub">Noctura's moisture-wicking fabric pulls the heat away and gives you back the whole night. Lab-proven to keep you cool, wash after wash.</p>
+    <a href="#" class="btn">SHOP THE COOLING SET →</a>
+    <div class="rat">★★★★★ <b>4.8</b> · Loved by 12,000+ hot sleepers</div>
+  </div>
+  <div class="ph">IMAGEM · mulher 45+ dormindo tranquila, lençol claro, luz fria azulada · foto lifestyle real (não IA óbvia)</div>
+</div>
+
+<!-- TRUST -->
+<div class="trust"><div class="wrap sans">
+  <span>❄ <b>Stays cool</b> after 50 washes</span>
+  <span>🌿 <b>Bamboo viscose</b> — no pilling</span>
+  <span>😴 Sleep <b>26 min longer</b></span>
+  <span>↩ <b>60-night</b> trial</span>
+</div></div>
+
+<!-- MECHANISM -->
+<section><div class="wrap">
+  <div class="kick">Why it works</div>
+  <h2>Not just soft. Engineered to keep you cool.</h2>
+  <p class="lead">The problem isn't you, it's the fabric. Cotton and fake "bamboo" rayon trap heat and cling when damp. Noctura does the opposite.</p>
+  <div class="mech">
+    <div class="card"><div class="ph">IMAGEM · close-up macro do tecido / gota de água escorrendo</div><h3>Wicks the sweat away</h3><p>Pulls moisture off your skin and dries 4× faster than cotton, so you never wake up clammy.</p></div>
+    <div class="card"><div class="ph">IMAGEM · termografia / azul frio vs vermelho quente</div><h3>Temperature-regulating</h3><p>Breathable weave releases trapped body heat instead of holding it against you all night.</p></div>
+    <div class="card"><div class="ph">IMAGEM · etiqueta "certified" / selo de laboratório</div><h3>Proven, not promised</h3><p>Lab-tested to stay cool to the touch, wash after wash. No fading cooling that quits after a month.</p></div>
+  </div>
+</div></section>
+
+<!-- PRODUCTS -->
+<section style="background:#fff"><div class="wrap">
+  <div class="kick">Best sellers</div>
+  <h2>The sets hot sleepers reorder</h2>
+  <p class="lead">Buttery-soft, breathable, and cut to skim without clinging. Modern, never frumpy.</p>
+  <div class="grid">
+    <div class="prod"><div class="ph">IMAGEM · The Cooling Short Set em tom neutro</div><h3>The Cooling Short Set</h3><div class="pr">$89 <s>$118</s></div></div>
+    <div class="prod"><div class="ph">IMAGEM · The 3AM Nightgown</div><h3>The 3AM Nightgown</h3><div class="pr">$79 <s>$98</s></div></div>
+    <div class="prod"><div class="ph">IMAGEM · The Long Sleep Set</div><h3>The Long Sleep Set</h3><div class="pr">$96 <s>$124</s></div></div>
+  </div>
+  <div style="text-align:center;margin-top:34px"><a href="#" class="btn teal">SHOP ALL COOLING SETS →</a></div>
+</div></section>
+
+<!-- GIFT -->
+<div class="gift"><section><div class="wrap">
+  <div>
+    <div class="kick" style="text-align:left;color:var(--ink)">The gift that ends the 3AM wake-up</div>
+    <h2>For the mom, wife or friend going through menopause.</h2>
+    <p class="lead">One of the most thoughtful gifts you can give someone who hasn't slept a full night in months. Arrives gift-ready.</p>
+    <a href="#" class="btn">SHOP GIFT SETS →</a>
+  </div>
+  <div class="ph">IMAGEM · caixa-presente Noctura com laço, tom blush</div>
+</div></section></div>
+
+<!-- QUOTE -->
+<div class="quote"><section><div class="wrap">
+  <p>"I stopped waking up soaked. First full night of sleep in two years."</p>
+  <div class="who sans">— Karen M., verified buyer · 52</div>
+</div></section></div>
+
+<footer><div class="wrap">
+  <div><b>NOCTURA</b>Cooling sleepwear for hot sleepers &amp; menopause nights. Ships from the USA.</div>
+  <div><b>Shop</b><a href="#">Cooling Sets</a><a href="#">Nightgowns</a><a href="#">Gift Sets</a></div>
+  <div><b>Help</b><a href="#">60-night trial</a><a href="#">Shipping</a><a href="#">Size guide</a><a href="#">Contact</a></div>
+  <div><b>The brand</b><a href="#">The science</a><a href="#">Reviews</a><a href="#">Our fabric</a></div>
+</div></footer>
+</body></html>
