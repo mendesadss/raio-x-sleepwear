@@ -1,0 +1,184 @@
+{
+  "_nota": "Contrato de execucao pro /montar-loja. Loja JA EXISTE (serenasleepwear.com) - isto e um plano de REORGANIZACAO e REPOSICIONAMENTO, nao uma loja nova do zero. Mercado primario continua US (onde ja opera); expansao pro Reino Unido (GBP, via Shopify Markets) e a Fase 2 recomendada pela pesquisa, ver plano-de-acao.html secao 00 e 06.",
+  "marca": {
+    "nome": "Serena Sleepwear",
+    "pais": "US",
+    "moeda": "USD",
+    "idioma": "en",
+    "paleta": {
+      "bg": "#F6F1EA",
+      "bg2": "#EFE2DF",
+      "primary": "#14213A",
+      "accent": "#3E8E8A",
+      "ink": "#22252B",
+      "good": "#3E8E8A",
+      "line": "#E6DDD2"
+    },
+    "fontes": {
+      "titulo": { "nome": "Cormorant Garamond", "handle": "cormorant_n5" },
+      "corpo": { "nome": "Inter", "handle": "inter_n4" }
+    },
+    "logo": null,
+    "announcement": "Free shipping over $150 · 30-Night Comfort Guarantee"
+  },
+  "colecoes": [
+    { "handle": "cooling-sleepwear", "titulo": "Cooling Sleepwear", "descricao_html": "<p>Nightdresses and pajama sets engineered to move heat away from your skin, so you sleep through the night instead of waking up damp.</p>" },
+    { "handle": "cooling-sheets", "titulo": "Cooling Sheet Sets", "descricao_html": "<p>The complete sleep system: breathable sheets that pair with your Serena sleepwear for a cooler bed from every side.</p>" },
+    { "handle": "comfort-extras", "titulo": "Comfort Extras", "descricao_html": "<p>Small additions that finish the ritual — a cooling eye mask, a soft slipper — easy add-ons at checkout.</p>" }
+  ],
+  "produtos": [
+    {
+      "handle": "aurora-nightdress",
+      "titulo": "Aurora Cooling Nightdress",
+      "tipo": "Nightdress",
+      "tags": ["cooling", "night-sweats", "hero"],
+      "colecao": "cooling-sleepwear",
+      "preco": "79.90",
+      "de": "98.00",
+      "sku": "SRN-AUR-01",
+      "status": "active",
+      "descricao_html": "<p>The Aurora is Serena's simplest nightdress — one layer of breathable, moisture-wicking fabric between you and a hot night. No lace to trap heat, no thick seams, just a relaxed cut that moves air instead of holding it against your skin.</p><ul><li>Moisture-wicking fabric engineered to pull heat and sweat away from the body</li><li>Relaxed, non-binding fit — never clings when you're already warm</li><li>Machine washable, holds its softness wash after wash</li><li>True to size, S–XL</li></ul><p>Designed for the nights when the room feels fine but you don't — restless legs, a flipped pillow, waking up at 3am. The Aurora is the first thing to change before you change anything else.</p>",
+      "seo_titulo": "Aurora Cooling Nightdress for Night Sweats | Serena Sleepwear",
+      "seo_descricao": "Moisture-wicking nightdress engineered to keep you cool through hot flashes and night sweats. Free shipping over $150. 30-night comfort guarantee.",
+      "pdp": {
+        "eyebrow": "For Warm, Restless Nights",
+        "lede": "You've flipped the pillow, changed the sheets, turned down the thermostat — and you're still waking up damp. The Aurora isn't another pajama. It's a different fabric.",
+        "proof": "",
+        "season": "Best-seller · year-round"
+      },
+      "imagens": []
+    },
+    {
+      "handle": "elena-nigthdress",
+      "titulo": "Elena Cooling Nightdress",
+      "tipo": "Nightdress",
+      "tags": ["cooling", "night-sweats"],
+      "colecao": "cooling-sleepwear",
+      "preco": "79.90",
+      "de": "94.00",
+      "sku": "SRN-ELN-01",
+      "status": "active",
+      "descricao_html": "<p>A softer, slightly fuller cut of Serena's cooling nightdress, for anyone who wants a bit more coverage without giving up the breathable fabric. Same wicking technology as the Aurora, in a longer silhouette.</p><ul><li>Same moisture-wicking fabric as the Aurora, longer length</li><li>Adjustable straps</li><li>Machine washable</li></ul>",
+      "seo_titulo": "Elena Cooling Nightdress | Serena Sleepwear",
+      "seo_descricao": "A longer, breathable cooling nightdress for hot sleepers. Moisture-wicking fabric, relaxed fit.",
+      "pdp": { "eyebrow": "For Warm, Restless Nights", "lede": "A little more coverage, the same cool night.", "proof": "", "season": "Year-round" },
+      "imagens": []
+    },
+    {
+      "handle": "margot-pajama-set",
+      "titulo": "Margot Cooling Pajama Set",
+      "tipo": "Pajama Set",
+      "tags": ["cooling", "night-sweats", "set"],
+      "colecao": "cooling-sleepwear",
+      "preco": "89.90",
+      "de": "108.00",
+      "sku": "SRN-MAR-01",
+      "status": "active",
+      "descricao_html": "<p>A two-piece set for anyone who prefers full coverage overnight. Loose-fitting top and pant in the same cooling fabric as the Aurora — nothing tight at the waist, nothing that traps heat where it matters most.</p><ul><li>Moisture-wicking fabric, top and bottom</li><li>Loose, non-binding waistband</li><li>Machine washable</li></ul>",
+      "seo_titulo": "Margot Cooling Pajama Set | Serena Sleepwear",
+      "seo_descricao": "Two-piece moisture-wicking pajama set for hot sleepers. Loose fit, breathable fabric, machine washable.",
+      "pdp": { "eyebrow": "For Warm, Restless Nights", "lede": "Full coverage that still lets your skin breathe.", "proof": "", "season": "Year-round" },
+      "imagens": []
+    },
+    {
+      "handle": "odette-pajama-set",
+      "titulo": "Odette Cooling Pajama Set",
+      "tipo": "Pajama Set",
+      "tags": ["cooling", "night-sweats", "set"],
+      "colecao": "cooling-sleepwear",
+      "preco": "99.90",
+      "de": "119.00",
+      "sku": "SRN-ODT-01",
+      "status": "active",
+      "descricao_html": "<p>A slightly more structured pajama set, same cooling fabric family. For anyone who wants their sleepwear to look a little more put-together without giving up comfort.</p><ul><li>Moisture-wicking fabric</li><li>Notch collar top, straight-leg pant</li><li>Machine washable</li></ul>",
+      "seo_titulo": "Odette Cooling Pajama Set | Serena Sleepwear",
+      "seo_descricao": "A more structured cooling pajama set for warm sleepers. Breathable fabric, classic fit.",
+      "pdp": { "eyebrow": "For Warm, Restless Nights", "lede": "Sleepwear that still looks like you got dressed.", "proof": "", "season": "Year-round" },
+      "imagens": []
+    },
+    {
+      "handle": "luna-short-set",
+      "titulo": "Luna Cooling Short Set",
+      "tipo": "Pajama Set",
+      "tags": ["cooling", "night-sweats", "set", "short"],
+      "colecao": "cooling-sleepwear",
+      "preco": "89.90",
+      "de": "108.00",
+      "sku": "SRN-LUN-01",
+      "status": "active",
+      "descricao_html": "<p>The short-sleeve, short-leg version, for the warmest nights or the warmest sleepers. Same wicking fabric, maximum airflow.</p><ul><li>Moisture-wicking fabric, short sleeve and short leg</li><li>Loose, non-binding fit</li><li>Machine washable</li></ul>",
+      "seo_titulo": "Luna Cooling Short Set | Serena Sleepwear",
+      "seo_descricao": "Short-sleeve moisture-wicking pajama set for the hottest nights. Maximum airflow, breathable fabric.",
+      "pdp": { "eyebrow": "For Warm, Restless Nights", "lede": "When even a long sleeve feels like too much.", "proof": "", "season": "Warm months" },
+      "imagens": []
+    },
+    {
+      "handle": "breeze-sheet-set",
+      "titulo": "Breeze Cooling Sheet Set",
+      "tipo": "Sheets",
+      "tags": ["cooling", "sheets", "sleep-system"],
+      "colecao": "cooling-sheets",
+      "preco": "79.90",
+      "de": "99.90",
+      "sku": "SRN-BRZ-TWIN",
+      "status": "active",
+      "descricao_html": "<p>Part of the Serena Air collection, the Breeze Sheet Set is built for the same restless, warm-natured sleepers who wear our cooling sleepwear — so your bed feels as fresh as your pajamas. Breathable fabric lets excess heat escape instead of trapping it against your skin.</p><ul><li>Breathable, all-season fabric</li><li>Deep pocket fitted sheet, fits mattresses up to 16in deep</li><li>Includes flat sheet, fitted sheet, and pillowcase(s)</li><li>Machine washable</li></ul><p>Pairs naturally with any Serena cooling nightdress or pajama set for a complete cool-night system, from what you wear to what you sleep on.</p>",
+      "seo_titulo": "Breeze Cooling Sheet Set | Serena Sleepwear",
+      "seo_descricao": "Breathable sheet set designed to pair with Serena cooling sleepwear for a complete cool-night sleep system.",
+      "pdp": { "eyebrow": "The Complete Sleep System", "lede": "Your pajamas can only do half the job if the sheets underneath are trapping heat too.", "proof": "", "season": "Best paired with the Aurora Nightdress" },
+      "imagens": []
+    },
+    {
+      "handle": "moonlight-mask",
+      "titulo": "Moonlight Cooling Eye Mask",
+      "tipo": "Accessory",
+      "tags": ["add-on", "cooling"],
+      "colecao": "comfort-extras",
+      "preco": "25.90",
+      "de": "32.00",
+      "sku": "SRN-MSK-01",
+      "status": "active",
+      "descricao_html": "<p>A soft, contoured eye mask in the same breathable fabric family as the rest of the Serena collection. Blocks light without pressing on your eyes or trapping heat on your face.</p><ul><li>Contoured, no eye pressure</li><li>Breathable fabric</li><li>Adjustable strap</li></ul>",
+      "seo_titulo": "Moonlight Cooling Eye Mask | Serena Sleepwear",
+      "seo_descricao": "Soft, breathable contoured eye mask that blocks light without trapping heat.",
+      "pdp": { "eyebrow": "Finish the Ritual", "lede": "Total dark, zero heat on your face.", "proof": "", "season": "Add at checkout" },
+      "imagens": []
+    },
+    {
+      "handle": "cloud-slippers",
+      "titulo": "Cloud Slippers",
+      "tipo": "Accessory",
+      "tags": ["add-on", "comfort"],
+      "colecao": "comfort-extras",
+      "preco": "49.90",
+      "de": "59.00",
+      "sku": "SRN-SLP-01",
+      "status": "active",
+      "descricao_html": "<p>Soft, breathable slippers to finish the Serena sleep ritual — indoor-only, lightweight, and machine washable.</p><ul><li>Breathable upper</li><li>Non-slip sole</li><li>Machine washable</li></ul>",
+      "seo_titulo": "Cloud Slippers | Serena Sleepwear",
+      "seo_descricao": "Soft, breathable indoor slippers to complete your Serena sleep ritual.",
+      "pdp": { "eyebrow": "Finish the Ritual", "lede": "The last step before bed.", "proof": "", "season": "Add at checkout" },
+      "imagens": []
+    }
+  ],
+  "addons": [
+    { "handle": "moonlight-mask", "titulo": "Moonlight Cooling Eye Mask", "preco": "25.90", "de": "", "sku": "SRN-MSK-01" },
+    { "handle": "cloud-slippers", "titulo": "Cloud Slippers", "preco": "49.90", "de": "", "sku": "SRN-SLP-01" },
+    { "handle": "sleep-guide-digital", "titulo": "The Cool Nights Guide (digital PDF)", "preco": "9.00", "de": "", "sku": "SRN-DIG-01" }
+  ],
+  "bump_pdp": { "handle": "moonlight-mask" },
+  "paginas": [
+    { "handle": "contact", "titulo": "Contact Us", "corpo_html": "<p>Questions about sizing, an order, or your Comfort Guarantee? Email us at hello@serenasleepwear.com and we'll get back to you within 1 business day.</p>" },
+    { "handle": "shipping-policy", "titulo": "Shipping Policy", "corpo_html": "<p>Orders ship within 2 business days. Standard US shipping typically arrives in 3-5 business days. Free shipping on orders over $150.</p>" },
+    { "handle": "refund-policy", "titulo": "Refund Policy", "corpo_html": "<p>We offer a 30-Night Comfort Guarantee. If you're not sleeping better after 30 nights, contact us for a full refund on your first order. Items must be unwashed and in original condition for standard returns within 30 days of delivery.</p>" },
+    { "handle": "privacy-policy", "titulo": "Privacy Policy", "corpo_html": "<p>We collect only the information needed to process your order and improve your experience. We never sell your data. Contact hello@serenasleepwear.com with any privacy questions.</p>" },
+    { "handle": "terms-of-service", "titulo": "Terms of Service", "corpo_html": "<p>By using serenasleepwear.com you agree to our standard terms of sale, including our Shipping and Refund Policies. All prices are listed in USD unless otherwise noted.</p>" }
+  ],
+  "menu": [
+    { "tipo": "frontpage", "titulo": "Home" },
+    { "tipo": "collection", "handle": "cooling-sleepwear", "titulo": "Cooling Sleepwear" },
+    { "tipo": "collection", "handle": "cooling-sheets", "titulo": "Sheet Sets" },
+    { "tipo": "collection", "handle": "comfort-extras", "titulo": "Comfort Extras" }
+  ],
+  "tema": { "settings": {} }
+}

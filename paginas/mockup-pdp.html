@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serena Sleepwear — Aurora Cooling Nightdress (mockup PDP)</title>
+<style>
+:root{--bg:#F6F1EA;--bg2:#EFE2DF;--ink:#22252B;--navy:#14213A;--teal:#3E8E8A;--rose:#E8C4C0;--line:#E6DDD2}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Cormorant Garamond',serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;margin:0}
+p,a,span,button,li,label{font-family:Inter,-apple-system,Segoe UI,Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.announce{background:var(--navy);color:#fff;text-align:center;font-size:12px;letter-spacing:.06em;padding:8px}
+header.site{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;border-bottom:1px solid var(--line)}
+.logo{font-size:21px;color:var(--navy)}
+nav.menu{display:flex;gap:24px;font-size:13px}
+.breadcrumb{font-size:12px;color:#8a8f78;padding:16px 32px 0;font-family:Inter,sans-serif}
+.pdp{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;padding:26px 32px 60px;max-width:1240px;margin:0 auto}
+.pdp > div{min-width:0}
+/* BLOCO: galeria */
+.gal-main{position:relative;background:linear-gradient(135deg,var(--rose),var(--bg2));aspect-ratio:4/5;border-radius:4px;overflow:hidden}
+.gal-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:10px}
+.gal-thumbs div{aspect-ratio:1/1;min-width:0;background:linear-gradient(135deg,var(--rose),var(--bg2));border-radius:3px;position:relative;font-size:8px;overflow:hidden}
+.imgnote{position:absolute;left:8px;bottom:8px;right:8px;background:rgba(20,33,58,.85);color:#fff;font-size:10.5px;padding:5px 7px;border-radius:5px;line-height:1.3}
+.imgnote.big{font-size:12px;padding:8px 10px}
+.thumbnote{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#14213A;font-size:9px;text-align:center;padding:4px;line-height:1.2;background:rgba(255,255,255,.55)}
+/* right col */
+.buybox .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.buybox h1{font-size:34px;color:var(--navy);margin:10px 0 8px;line-height:1.1}
+.stars-row{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--navy)}
+.stars-row .stars{color:var(--rose)}
+/* BLOCO: preco-ancora */
+.priceblock{display:flex;align-items:baseline;gap:10px;margin:16px 0 6px}
+.price{font-size:26px;color:var(--navy);font-weight:700;font-family:Inter,sans-serif}
+.price-de{font-size:16px;color:#9a9a90;text-decoration:line-through;font-family:Inter,sans-serif}
+.price-off{background:var(--rose);color:var(--navy);font-size:11px;padding:3px 8px;border-radius:99px;font-weight:700}
+.installment{font-size:12.5px;color:#6b7280}
+/* BLOCO: lede */
+.lede{background:var(--bg2);border-left:3px solid var(--teal);padding:14px 16px;margin:18px 0;font-size:14px;color:#3a4150;line-height:1.55;border-radius:0 6px 6px 0}
+/* size */
+.sizerow{margin:18px 0}
+.sizerow .lbl{font-size:12.5px;color:var(--navy);font-weight:700;margin-bottom:8px}
+.sizes{display:flex;gap:8px}
+.sizes span{border:1px solid var(--line);padding:9px 15px;border-radius:3px;font-size:13px;cursor:pointer}
+.sizes span.sel{border-color:var(--navy);background:var(--navy);color:#fff}
+.addcart{width:100%;background:var(--navy);color:#fff;padding:16px;border:0;border-radius:2px;font-size:14px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin-top:18px;cursor:pointer}
+.guaranteeline{display:flex;gap:8px;align-items:center;font-size:12px;color:#6b7280;margin-top:12px}
+/* BLOCO: order-bump */
+.bump{border:1px dashed var(--teal);border-radius:8px;padding:14px 16px;margin-top:20px;display:flex;gap:12px;align-items:center;background:rgba(62,142,138,.06)}
+.bump .bimg{width:52px;height:52px;border-radius:6px;background:var(--rose);flex:none}
+.bump .btxt{flex:1;font-size:13px}
+.bump .btxt b{color:var(--navy)}
+.bump label{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--teal);font-weight:700}
+/* BLOCO: bullets-objecao */
+.bullets{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
+.bullets li{font-size:13.5px;color:#4a5060;margin-bottom:10px;padding-left:22px;position:relative;line-height:1.5}
+.bullets li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-weight:700}
+/* BLOCO: faixa-confianca */
+.faixa{display:flex;justify-content:space-around;background:var(--bg2);padding:16px;border-radius:8px;margin-top:24px;font-size:12px;color:var(--navy);flex-wrap:wrap;gap:10px;font-family:Inter,sans-serif}
+/* BLOCO: editorial-beat */
+section.editorial{padding:60px 0;background:var(--bg2)}
+.editgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;max-width:1240px;margin:0 auto;padding:0 32px}
+.editgrid h2{font-size:28px;color:var(--navy);margin-bottom:12px}
+.editgrid p{font-family:Inter,sans-serif;font-size:14px;color:#4a5060;line-height:1.65}
+.editimg{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,var(--rose),var(--bg));border-radius:6px}
+/* BLOCO: upsell */
+section.upsell{padding:60px 32px;text-align:center}
+section.upsell h2{font-size:26px;color:var(--navy);margin-bottom:26px}
+.upgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:640px;margin:0 auto}
+.upcard{border:1px solid var(--line);border-radius:8px;padding:16px;text-align:left}
+.upcard .uimg{aspect-ratio:1/1;background:linear-gradient(135deg,var(--rose),var(--bg2));border-radius:5px;margin-bottom:10px}
+.upcard h4{font-size:15px;color:var(--navy)}
+.upcard p{font-family:Inter,sans-serif;font-size:12px;color:#6b7280;margin:6px 0}
+/* BLOCO: reviews */
+section.pdp-reviews{padding:60px 32px}
+section.pdp-reviews h2{text-align:center;font-size:28px;color:var(--navy);margin-bottom:30px}
+.revgrid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.revcard{border:1px solid var(--line);border-radius:8px;padding:18px;position:relative}
+.revcard .rimg{aspect-ratio:1/1;background:linear-gradient(135deg,var(--rose),var(--bg2));border-radius:6px;margin-bottom:10px}
+.revcard .stars{color:var(--rose);font-size:13px;margin-bottom:8px}
+.revcard p{font-family:Inter,sans-serif;font-size:12.5px;color:#4a5060;line-height:1.5}
+/* BLOCO: faq */
+section.faq{max-width:760px;margin:0 auto;padding:50px 32px}
+section.faq h2{text-align:center;font-size:26px;color:var(--navy);margin-bottom:22px}
+.faqitem{border-bottom:1px solid var(--line);padding:16px 0}
+.faqitem b{color:var(--navy);font-size:14px}
+.faqitem p{font-family:Inter,sans-serif;font-size:13px;color:#6b7280;margin-top:6px}
+/* BLOCO: sticky-mobile */
+.stickybar{display:none;background:#fff;border-top:1px solid var(--line);padding:10px 14px;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+.stickybar .p{font-family:Inter,sans-serif;font-weight:700;color:var(--navy)}
+.stickybar button{background:var(--navy);color:#fff;border:0;padding:12px 22px;border-radius:2px;font-size:12.5px;font-weight:700;text-transform:uppercase}
+@media(max-width:820px){
+  .wrap{padding:0 18px}
+  header.site{padding:14px 18px}
+  nav.menu{display:none}
+  .pdp{grid-template-columns:1fr;padding:16px 18px 90px;gap:26px}
+  .editgrid{grid-template-columns:1fr;padding:0 18px;gap:22px}
+  .upgrid{grid-template-columns:1fr 1fr}
+  .revgrid{grid-template-columns:1fr}
+  .faixa{flex-direction:column;align-items:flex-start}
+  .stickybar{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">FREE SHIPPING OVER $150 &nbsp;·&nbsp; 30-NIGHT COMFORT GUARANTEE</div>
+<header class="site">
+  <div class="logo">Serena</div>
+  <nav class="menu"><a>Cooling Sleepwear</a><a>Sheet Sets</a><a>Comfort Extras</a><a>Our Story</a></nav>
+  <div>🔍 &nbsp; 👤 &nbsp; 🛍️</div>
+</header>
+<div class="breadcrumb">Home / Cooling Sleepwear / Aurora Cooling Nightdress</div>
+
+<div class="pdp">
+  <!-- BLOCO: galeria -->
+  <div>
+    <div class="gal-main">
+      <div class="imgnote big">IMAGEM 1 · Aurora Nightdress vestida, mulher 45+, luz de janela pela manhã, expressão tranquila</div>
+    </div>
+    <div class="gal-thumbs">
+      <div><div class="thumbnote">IMAGEM 2 · still de produto, fundo neutro</div></div>
+      <div><div class="thumbnote">IMAGEM 3 · detalhe do tecido/textura, macro</div></div>
+      <div><div class="thumbnote">IMAGEM 4 · costas, caimento solto</div></div>
+      <div><div class="thumbnote">IMAGEM 5 · deitada, lençol Breeze, cena de cama completa</div></div>
+      <div><div class="thumbnote">IMAGEM 6 · guia de tamanhos (infográfico)</div></div>
+      <div><div class="thumbnote">IMAGEM 7 · comparação tecido Serena vs. algodão comum (infográfico)</div></div>
+      <div><div class="thumbnote">IMAGEM 8 · mulher acordando, luz da manhã, sem cara de cansada</div></div>
+      <div><div class="thumbnote">IMAGEM 9 · review orgânico: foto de cliente real</div></div>
+    </div>
+  </div>
+
+  <!-- BLOCO: prova-social + lede + preco-ancora -->
+  <div class="buybox">
+    <span class="eyebrow">For Warm, Restless Nights</span>
+    <h1>Aurora Cooling Nightdress</h1>
+    <div class="stars-row"><span class="stars">★★★★★</span><span>Loved by warm sleepers</span></div>
+
+    <div class="priceblock">
+      <span class="price">$79.90</span>
+      <span class="price-de">$98.00</span>
+      <span class="price-off">SAVE 18%</span>
+    </div>
+    <p class="installment">or 4 interest-free payments of $19.98 with Shop Pay</p>
+
+    <div class="lede">You've flipped the pillow, changed the sheets, turned down the thermostat — and you're still waking up damp. The Aurora isn't another pajama. It's a different fabric.</div>
+
+    <div class="sizerow">
+      <div class="lbl">SIZE</div>
+      <div class="sizes"><span>S</span><span class="sel">M</span><span>L</span><span>XL</span></div>
+    </div>
+
+    <button class="addcart">Add to Cart — $79.90</button>
+    <div class="guaranteeline">🔄 30-Night Comfort Guarantee · ships in 2 business days</div>
+
+    <!-- BLOCO: order-bump -->
+    <div class="bump">
+      <div class="bimg"></div>
+      <div class="btxt"><b>Add the Moonlight Cooling Eye Mask</b> — total dark, zero heat on your face. <b style="color:var(--navy)">+$19.90</b> <span style="color:#9a9a90;text-decoration:line-through">$25.90</span></div>
+      <label><input type="checkbox" checked> Add</label>
+    </div>
+
+    <!-- BLOCO: bullets-objecao -->
+    <ul class="bullets">
+      <li><b>Moisture-wicking fabric</b> engineered to pull heat and sweat away from your skin, not trap it like cotton.</li>
+      <li><b>Relaxed, non-binding fit</b> — nothing tight at the neck or waist when you're already warm.</li>
+      <li><b>Machine washable</b> and holds its softness wash after wash — no stiff "technical fabric" feel.</li>
+      <li><b>True to size</b>, S–XL. Not sure which size? See the size guide above.</li>
+    </ul>
+
+    <!-- BLOCO: faixa-confianca -->
+    <div class="faixa">
+      <span>🚚 Free over $150</span>
+      <span>🔄 30-night guarantee</span>
+      <span>💳 4x interest-free</span>
+      <span>🔒 Secure checkout</span>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCO: editorial-beat -->
+<section class="editorial"><div class="editgrid">
+  <div class="editimg"><div class="imgnote">IMAGEM 10 · review orgânico: cliente segurando a peça, luz natural</div></div>
+  <div>
+    <h2>Most "cooling" fabrics only wick sweat once it's already there.</h2>
+    <p>Serena's fabric is engineered to move heat away from your skin before it turns into sweat — not just soak it up after the fact. That's the difference between a pajama that feels damp by 2am and one that doesn't.</p>
+  </div>
+</div></section>
+
+<!-- BLOCO: upsell -->
+<section class="upsell"><div class="wrap">
+  <h2>Complete the sleep system</h2>
+  <div class="upgrid">
+    <div class="upcard"><div class="uimg"></div><h4>Breeze Cooling Sheet Set</h4><p>Because your pajamas can only do half the job.</p><b style="color:var(--navy)">$79.90</b></div>
+    <div class="upcard"><div class="uimg"></div><h4>Cloud Slippers</h4><p>Soft, breathable, the last step before bed.</p><b style="color:var(--navy)">$49.90</b></div>
+  </div>
+</div></section>
+
+<!-- BLOCO: reviews -->
+<section class="pdp-reviews"><div class="wrap">
+  <h2>What warm sleepers are saying</h2>
+  <div class="revgrid">
+    <div class="revcard"><div class="rimg"><div class="imgnote">IMAGEM 11 · review orgânico, foto de cliente na cama</div></div><div class="stars">★★★★★</div><p>"First nightdress that doesn't feel damp by 2am. Genuinely didn't think a fabric could make this much difference."</p></div>
+    <div class="revcard"><div class="rimg"></div><div class="stars">★★★★★</div><p>"Soft, not stiff like other 'cooling' fabrics I've tried. Feels like a real nightdress."</p></div>
+    <div class="revcard"><div class="rimg"></div><div class="stars">★★★★★</div><p>"Paired it with the sheet set — that combination is what actually changed my nights."</p></div>
+  </div>
+  <p style="font-family:Inter,sans-serif;font-size:11.5px;color:#9a9a90;text-align:center;margin-top:22px">Placeholder reviews for layout purposes — replace with real customer quotes once collected via Judge.me.</p>
+</div></section>
+
+<!-- BLOCO: faq -->
+<section class="faq">
+  <h2>Questions</h2>
+  <div class="faqitem"><b>Will this actually keep me cooler than my current pajamas?</b><p>The fabric is engineered to move heat and moisture away from your skin, not trap it like cotton or synthetic blends. Most customers notice the difference the first night.</p></div>
+  <div class="faqitem"><b>What if it doesn't work for me?</b><p>Sleep in it for 30 nights. If you're still waking up hot, email us for a full refund on your first order.</p></div>
+  <div class="faqitem"><b>How does it fit?</b><p>True to size, relaxed and non-binding. See the size guide in the photo gallery above.</p></div>
+  <div class="faqitem"><b>How long does shipping take?</b><p>Orders ship within 2 business days. Standard US shipping typically arrives in 3–5 business days.</p></div>
+</section>
+
+<!-- BLOCO: sticky-mobile (em fluxo — no site real via CSS position:sticky no tema, aqui ilustrado como último bloco da página) -->
+<div class="stickybar">
+  <span class="p">$79.90</span>
+  <button>Add to Cart</button>
+</div>
+
+</body>
+</html>

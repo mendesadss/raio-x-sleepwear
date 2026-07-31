@@ -1,0 +1,24 @@
+{
+ "lusome.com": {
+  "visitas": "4.9K",
+  "rankGlobal": "3,742,856",
+  "rankPais": "2,212,868",
+  "rankCategoria": null,
+  "bounce": "41.84%",
+  "pagesPerVisit": "1.75",
+  "duracao": "00:00:25",
+  "paises": [
+   {
+    "pais": "Canada",
+    "pct": "60.14%"
+   },
+   {
+    "pais": "United States",
+    "pct": "39.86%"
+   }
+  ],
+  "status": "OK",
+  "print": "prints/sw-lusome_com.jpg",
+  "dominio": "lusome.com"
+ }
+}

@@ -1,0 +1,162 @@
+{
+  "pesquisa": "Serena Sleepwear - Raio-X V2 - Sleepwear Cooling/Menopausa (multi-mercado)",
+  "data": "2026-07-31",
+  "modo": "profundo",
+  "escopo": "nicho",
+  "direcao": "direcionada (nivel iniciante de verdade, mentorado = Serena Sleepwear)",
+  "mercados_pesquisados": ["US", "GB", "DE", "FR", "NL", "SE", "IE", "CA"],
+  "contexto_mentorado": {
+    "loja": "serenasleepwear.com",
+    "situacao": "loja ja ativa, testando ha 12+ dias, 0 vendas, diagnostico operacional de 31/07/2026 identificou anuncio apontando pra pagina 404 como causa principal",
+    "catalogo_atual_confirmado": ["Breeze Sheet Set", "Aurora Nightdress", "Blair Pajama Set", "Camille Romper", "Celeste Nightdress", "Chloe Pajama Set", "Claire Pajama Set", "Elena Nightdress", "Elise Pajama Set", "Eve Short Set", "Juliette Short Set", "Luna Short Set", "Margot Pajama Set", "Mila Pajama Set (4 cores)", "Nina Short Set", "Odette Pajama Set", "Rosalie Nightdress", "Cloud Slippers", "Moonlight Mask"],
+    "paleta_atual": {"bg": "#0e1830", "primary": "#14213A", "accent": "#3E8E8A", "rosa": "#E8C4C0", "creme": "#F6F1EA"}
+  },
+  "benchmark_setor": {
+    "fonte": "IRP Commerce ecommercemarketdata.aspx",
+    "mes_referencia": "junho/2026",
+    "fashion_clothing": {"conversao": "1.70%", "aov": "£85.58", "cpa_pct_receita": "10.62%"},
+    "health_wellbeing": {"conversao": "2.58%", "aov": "£55.44", "cpa_pct_receita": "10.98%"},
+    "cpm_apparel_usd": 9.23,
+    "cpc_apparel_usd": 0.45
+  },
+  "universo_levantado": {
+    "angulos_testados": ["produto (cooling pajamas, moisture wicking sleepwear)", "situacao/dor (night sweats pajamas, hot flash pajamas, wake up hot)", "avatar (menopause pajamas, perimenopause sleepwear)", "beneficio (stay cool all night)", "concorrente conhecido (Lusome)", "variacoes idioma nativo (DE/FR/NL/SE)"],
+    "buscas_relevantes_realizadas": 32,
+    "criterio_saturacao": "atingido - ultimas 3 buscas em FR/NL/DE/IE nao trouxeram candidato novo qualificavel de sleepwear vestivel",
+    "candidatos_avaliados": [
+      {"nome": "Lusome Sleepwear", "page_id": "513211968766219", "pais": "CA/US", "resultado": "QUALIFICADO - unica loja de porte pequeno/medio real no angulo"},
+      {"nome": "Cool-jams", "page_id": "130234831234", "pais": "US", "resultado": "FORA - marca de 19 anos, adquirida por grupo investidor, fundadora com pagina na Wikipedia"},
+      {"nome": "Dore & Rose", "page_id": "100305879090611", "pais": "US/EU/AU", "resultado": "FORA - 304 produtos multi-categoria, 15241 anuncios historicos; angulo cooling especifico vende BEDDING (Aeris Cooling Comforter), nao sleepwear vestivel"},
+      {"nome": "jijamas", "page_id": "218925114951100", "pais": "US", "resultado": "FORA - marca DTC de ~13 anos, AOV $79-550, angulo night sweats e so teste de hook, site nao posiciona pra menopausa"},
+      {"nome": "LUNA Fabrics", "page_id": "610886138779363", "pais": "GB", "resultado": "FORA DO ESCOPO - vende bedding/lencois, zero pijama no catalogo"},
+      {"nome": "TheCollarfind", "page_id": "101391331376765", "pais": "US", "resultado": "FORA DO ESCOPO - e blog de afiliada Amazon, nao loja propria"},
+      {"nome": "TryNyth/TryWaft", "page_id": "1143932105462161", "pais": "EU (EUR)", "resultado": "FORA DO ESCOPO - provavel dispositivo vestivel de resfriamento ou suplemento, nao sleepwear"},
+      {"nome": "Cyberjammies", "page_id": "158909087370", "pais": "GB", "resultado": "nao aprofundado - marca de pijama GB estabelecida, sem angulo cooling/menopausa (padrao sazonal generico)"}
+    ]
+  },
+  "mercados_amplo_vs_especifico": {
+    "metodo": "termo amplo (pajamas/pyjamas women) vs termo especifico (night sweats/menopause pajamas), Ad Library ACTIVE",
+    "US": {"amplo": 3724, "especifico": 121, "razao_pct": 3.2, "leitura": "mercado grande, angulo ja com 2-3 players estabelecidos"},
+    "GB": {"amplo": 156, "especifico": 15, "razao_pct": 9.6, "leitura": "mercado menor mas razao mais alta com volume baixo absoluto = pouca gente disputando, gap real"},
+    "IE": {"amplo": 41, "especifico": 0, "razao_pct": 0, "leitura": "mercado pequeno, zero concorrencia no angulo"},
+    "FR": {"amplo": 781, "especifico": 0, "razao_pct": 0, "leitura": "mercado amplo real, angulo especifico inexistente (so suplementos de menopausa aparecem)"},
+    "DE": {"amplo": 6, "especifico": 1, "razao_pct": null, "leitura": "possivel limitacao de correspondencia de termo alemao na Ad Library; tratar como lacuna, nao como mercado pequeno de verdade"},
+    "NL": {"amplo": null, "especifico": 0, "leitura": "termo nativo nao testado com match suficiente, lacuna declarada"}
+  },
+  "google_trends": {
+    "lacuna_declarada": "trends-playwright.js baixou breakdown regional (interesse por sub-regiao) ao inves da serie temporal de 12 meses/5 anos esperada - mudanca de layout do widget do Google Trends nao coberta pelo script. Nao foi possivel classificar crescente/estavel/queda por serie temporal.",
+    "dado_utilizavel_capturado": {
+      "US": "'cooling pajamas' domina 'night sweats pajamas' na maioria dos estados (ex: Georgia 86% vs 14%) - o termo de produto generico busca mais que o termo especifico de sintoma+produto",
+      "GB": "'hot flushes' domina 'menopause nightwear' em proporcao de aproximadamente 100 para <1 em Inglaterra/Escocia/Pais de Gales - confirma que a busca no Reino Unido e pelo SINTOMA, o termo de PRODUTO praticamente nao existe ainda",
+      "DE": "'Schlafanzug Wechseljahre' sem volume suficiente para o Trends gerar dado - termo de produto+condicao inexistente nas buscas alemas"
+    }
+  },
+  "momentum_cultural_UK": {
+    "fonte": "WebSearch, julho 2026",
+    "achados": [
+      "Employment Rights Act 2025: apartir de abril/2026 empresas com 250+ funcionarios publicam Menopause Action Plans voluntarios, obrigatorios a partir de 2027",
+      "custo estimado de saidas/ausencias por menopausa pra economia do Reino Unido: £10.5 bilhoes/ano",
+      "Menopause in the Workplace Conference 2026 e cobertura de imprensa ampla (gov.uk, British Safety Council, etc)"
+    ],
+    "leitura": "a menopausa esta virando pauta legislativa/corporativa mainstream no Reino Unido de um jeito que nao esta (ainda) na Alemanha ou Franca - momentum cultural forte pra entrar com esse angulo"
+  },
+  "voz_do_mercado": {
+    "mecanismo_dominante_no_nicho": "tecido proprietario 'moisture-wicking' que 'puxa calor/umidade da pele' - cada marca da um nome de marca registrada pro mesmo principio (Lusome=Xirotex, Cool-jams=Kottinu, jijamas=Pima cotton 'temperature-regulating')",
+    "prova_cientifica_usada_pelo_lider": "Lusome cita 'Ivy-League medical school study' e '26 minutos a mais de sono por noite' - prova mais forte do nicho",
+    "endosso_usado": "Cool-jams usa recomendacao do Dr. Michael Breus ('The Sleep Doctor')",
+    "premios_lusome": "Good Housekeeping's Best Pajamas for Hot Sleepers, Oprah Daily's 2025 Menopause O-Wards",
+    "citacoes_reais_de_review": [
+      "The first night I wore them, I didn't wake up sweating like I usually do. They kept me cool and they are unbelievably soft, they feel like silk.",
+      "Comfort & wicking when sweating is incredible. I never feel wet or cold, I am always comfortable throughout the night."
+    ],
+    "objecao_principal": "cetismo de 'ja tentei de tudo (travesseiro, lencois, termostato) e nada funciona' - as marcas respondem citando o mecanismo especifico do tecido, nao promessa generica",
+    "fonte": "WebSearch em reviews Amazon/imprensa (HuffPost, Yahoo, Today.com), julho 2026"
+  },
+  "lojas_coletadas": {
+    "lusome": {
+      "dominio": "lusome.com",
+      "page_id": "513211968766219",
+      "plataforma": "Shopify",
+      "moeda_nativa": "CAD",
+      "entidade": "SOME INC.",
+      "catalogo": {"produtos": 36, "preco_min": 25, "preco_mediana": 88, "preco_max": 500, "moeda": "CAD", "primeiro_produto": "2022-03-09", "ultimo_produto": "2026-06-11"},
+      "idade_operacao_real": "~4 anos (catalogo de sleepwear desde 2022; Wayback do dominio e 2013, dominio reaproveitado)",
+      "midia_paga": {"ativos": 35, "historico": 35, "sobrevivencia_pct": 100, "janela_amostra_dias": 17, "google_ads_transparency": "~200 anuncios (5.7x o volume do Meta) - operacao mais forte em Google do que Meta"},
+      "trafego_similarweb": {"visitas_mes": "4.9K", "variacao_mes_anterior_pct": -52.14, "bounce_rate": 41.84, "paginas_visita": 1.75, "duracao_media": "00:00:25", "paises": {"CA": 60.14, "US": 39.86}, "canais": {"organico_pct": 48.72, "afiliado_2o_lugar": true, "pago_3o_lugar": true, "organico_vs_pago_busca": {"organico": 61.54, "pago": 38.46}}, "selo_confianca": "medido"},
+      "tranco": "sem rank (abaixo do limiar)",
+      "reviews": {"verificados_judgeme": 548, "nota": 4.7, "distribuicao": {"5estrelas_pct": 79, "4estrelas_pct": 12, "3estrelas_pct": 6, "2estrelas_pct": 1, "1estrela_pct": 1}, "alerta_fraude": "home alega '10.000+ Happy Sleepers' / '4.8 estrelas' - 18x acima do verificado (548). Nao usado para derivar pedidos.", "tema_reclamacao": "grade de tamanho limitada pra plus-size; 1 relato de cheiro quimico + entrega lenta"},
+      "produto_campeao": {"nome": "Eva Sleepshirt", "preco": 88, "moeda": "CAD", "imagens": 22},
+      "oferta": {"headline_home": "Night Sweats Stop Here. A complete sleep system", "frete_gratis_a_partir": "150 CAD", "prazo_envio": "2 dias uteis pra processar, 3-5 dias uteis pra chegar", "garantia": "30-Night Comfort Guarantee", "parcelamento": ["Sezzle (4x sem juros)", "Shop Pay parcelado"], "urgencia": "nenhuma", "bumps_upsell": "nenhum no carrinho/checkout - funil direto sem escada"},
+      "tech_stack": ["Klaviyo", "Judge.me", "Loox", "Vitals", "Upcart", "ReCharge", "Triple Whale", "Bold", "Microsoft Clarity", "GTM", "pixel TikTok", "pixel Snapchat"],
+      "social": {"instagram": "@lusomesleep, 12K seguidores, 330 posts", "facebook": "/LusomeSleepwear/", "tiktok": "@lusomesleepwear"},
+      "advertoriais_sitemap": ["discover-how-women-over-40-are-enjoying-sweat-free-nights-thanks-to-xirotech", "the-menopausal-breakthrough-ignored-by-big-pharma-a-fabric-that-guarantees-dry-nights", "experts-astonished-how-this-new-fabric-is-turning-menopausal-nights-around", "exposed-the-sleepwear-industrys-best-kept-secret-for-menopausal-women", "university-study-reveals-a-fabric-that-stops-night-sweats-in-their-tracks", "menopause-pajamas"],
+      "anatomia_vencedor": {
+        "criativo_mais_antigo_ativo": {"headline": "The #1 Hot Sleeper Secret 🏆", "ativo_desde": "2026-06-18", "dias_ativo": 43, "texto": "Most pajamas trap heat. Lusome is engineered to release it... Xirotex fabric... moves moisture and heat away from the body in under 10 seconds."},
+        "angulo_mais_repetido": {"headline": "Cooling for Menopausal Night Sweats / 26 More Minutes of Sleep Per Night", "produto": "Sheets premium ($328 CAD)", "mecanismo": "Xirotex absorve calor ANTES do suor aparecer, nao so depois", "prova": "estudo de faculdade de medicina Ivy League, -26min a mais de sono", "objecao_atacada": "Most cooling sheets only wick sweat once it's already there - Lusome goes further"}
+      },
+      "historico_preco_wayback": {"2022-08-15": "78 CAD", "2024-09-24": "78 CAD", "2025-10-16": "78 CAD", "2026-07-31": "88 CAD", "leitura": "preco estavel 3+ anos, subiu 12.8% recentemente - sinal de demanda sustentando reajuste"},
+      "prints": ["lusome-home.jpg", "lusome-pdp.jpg", "lusome-carrinho.jpg", "lusome-checkout.jpg"],
+      "classificacao_modelo": "DROPSHIP DE MARCA (evoluindo pra marca media) - fotografia propria (35 de 36 produtos), apps caros (Triple Whale, Vitals), rede de 10 advertoriais, 200 anuncios Google + 35 Meta. Nao e mais MVP puro de iniciante, mas e a UNICA prova de conceito de porte pequeno/medio no angulo.",
+      "veredito": "MODELAR",
+      "nivel": "MEDIO (a operacao de hoje) - mas serve de MOLDE DE PRODUTO/OFERTA/COPY pra um MVP de nivel iniciante em territorio novo (Reino Unido)",
+      "defensabilidade": "CONSTRUIVEL - 48.7% trafego organico, premios de imprensa, Instagram com 12K, nao e so arbitragem"
+    },
+    "cooljams": {
+      "dominio": "cool-jams.com",
+      "page_id": "130234831234",
+      "fundacao": "2007 (~19 anos)",
+      "entidade": "adquirida por grupo investidor Inversal em 2023, fundadora Anita Mahaffey (pagina na Wikipedia)",
+      "midia_paga": {"ativos": 29, "historico": 29, "sobrevivencia_pct": 100},
+      "linha_angulo": "NightCool - 44 produtos, TODOS criados entre 23/02/2026 e 22/07/2026 (linha nova apesar da marca ter 19 anos)",
+      "produto_campeao_proxy": {"nome": "Women's NightCool Pleated T-Shirt", "preco": 60, "moeda": "USD"},
+      "precos_linha": {"tops": 60, "calcas_shorts": 70, "camisolas": 80, "conjuntos": 120},
+      "mecanismo": "tecido proprietario 'Kottinu' (engineered moisture-wicking fabric)",
+      "anatomia_vencedor": {"headline_principal": "Stop waking up hot / Finally. Sleep through the night. / The 3am flip stops here. / Built for women who run hot.", "estatistica_usada": "80% of women experience night sweats", "objecao": "ja tentei de tudo e nada funciona / e so mais um pijama de algodao ('deserve better than cotton')"},
+      "oferta": {"frete_gratis_a_partir": "120 USD", "devolucao": "30 dias com etiqueta"},
+      "reviews_proxy_wayback2025": {"nota": 4.8, "contagens_produtos_classicos": [261, 217]},
+      "tech_stack": ["Shopify Impulse", "Stamped.io (reviews)", "Klaviyo", "Wishlist Whale", "possivel Rebuy"],
+      "lacunas": "site protegido por Cloudflare (bloqueou Playwright headless/headful, curl, WebFetch); reviews/garantia/parcelamento nao confirmados ao vivo, usado proxy Wayback",
+      "classificacao_modelo": "MARCA - 19 anos, capital institucional, fundadora com biografia publica, reconhecimento de imprensa/premio",
+      "veredito": "OBSERVAR",
+      "defensabilidade": "CONSTRUIVEL (mas nao replicavel - e a barreira que o iniciante nao paga)"
+    },
+    "doreandrose": {
+      "dominio": "doreandrose.com",
+      "page_id": "100305879090611",
+      "midia_paga": {"ativos": 687, "historico": 15241, "sobrevivencia_pct": 4.5},
+      "catalogo": {"produtos": 304, "preco_medio": 143, "categorias": ["pajamas (96)", "eye masks (55)", "ponytail holders (26)", "pillowcases (12)", "quilts", "robes", "lingerie"]},
+      "achado_critico": "o angulo cooling/menopausa ('Hot flashes ruining your sleep?') NAO vende pijama - vende a linha Aeris Cooling: comforter (edredom), pillowcase, sleep mask. E BEDDING, nao sleepwear vestivel.",
+      "produto_real_do_angulo": {"nome": "Aeris Cooling Comforter", "material": "90% Nylon, 10% Spandex com infusao de ions de prata", "precos": {"twin": 114, "full_queen": 124, "king": 139}, "moeda": "EUR", "desconto": "33% off tabela cheia"},
+      "anatomia_vencedor": {"headline": "Hot flashes ruining your sleep?", "video_0m43s": true, "texto": "Designed for women navigating hormonal changes... Aeris Cooling Collection... regulates temperature and provides instant cooling relief", "prova_painel": "95% relataram melhora percebida no sono, 89% melhor controle de temperatura, 97% prefeririam a colecao", "prova_social_criativo": "5.000+ Reviews (nao especifico do produto)"},
+      "oferta": {"garantia": "30-Day Risk-Free Trial", "frete_gratis_a_partir": "70 EUR", "urgencia": "countdown timer 'Buy More Save More'"},
+      "idade_dominio": "~4.7 anos (Wayback dez/2021)",
+      "classificacao_modelo": "MARCA - catalogo de 300+ SKUs multi-categoria, 15k anuncios historicos, fotografia propria de estudio",
+      "veredito": "OBSERVAR (e FORA DO ESCOPO direto pra sleepwear vestivel - e referencia de bedding/anatomia de oferta)",
+      "defensabilidade": "ARBITRAGEM/CONSTRUIVEL misto - alto volume de midia paga mas catalogo com profundidade real"
+    },
+    "jijamas": {
+      "dominio": "jijamas.com",
+      "page_id": "218925114951100",
+      "fundacao": "~13 anos (Wayback 2013), fundadores Gustavo e Courtney Sanchez, NJ",
+      "midia_paga": {"ativos": 20, "historico": 20, "sobrevivencia_pct": 100, "janela": "dez/2025 a jul/2026"},
+      "catalogo": {"produtos": 41, "tipos": "33 pajamas, 1 robe", "preco_min": 79, "preco_mediana": 117, "preco_max": 550},
+      "posicionamento_site": "marca family/unissex de Pima cotton premium - NAO posiciona pra menopausa em lugar nenhum do site, o angulo night sweats e so teste de hook publicitario",
+      "anatomia_vencedores": [
+        {"headline": "Why Hot Sleepers Love These PJs", "texto": "No tossing. No sweating. No 3 AM wake-up calls.", "mecanismo": "Pima cotton fibra longa, temperature-regulating fibers"},
+        {"headline": "Bye-bye, Night Sweats", "texto": "Flipping your pillow to the cool side for the tenth time tonight?", "mecanismo": "mesmo Pima cotton, reframe de causa (culpa e o tecido sintetico, nao o ambiente)"}
+      ],
+      "lacuna": "os 2 anuncios do angulo nao levam a PDP especifica, caem na home - nao ha coleção dedicada ao angulo cooling",
+      "reviews": {"amostra_1_produto": 43, "nota": 4.84},
+      "tech_stack": ["Klaviyo", "Judge.me"],
+      "oferta": {"frete_gratis_EUA": true, "garantia": "45 dias troca, apos 30 dias vira credito de loja (nao reembolso)", "parcelamento": "Shop Pay Installments 0% juros, 4x"},
+      "classificacao_modelo": "MARCA DTC madura - manufatura propria, AOV alto, fotografia propria, reviews organicos",
+      "veredito": "OBSERVAR",
+      "defensabilidade": "CONSTRUIVEL (nao replicavel)"
+    }
+  },
+  "lojas_fora_de_escopo": {
+    "luna_fabrics": {"motivo": "vende bedding/lencois, zero sleepwear vestivel no catalogo de 14 produtos", "pais": "GB", "midia_paga_ativos": 180, "midia_paga_historico": 1227},
+    "thecollarfind": {"motivo": "e blog de afiliada Amazon (@thecollarfind, 358k IG), nao loja propria - mix heterogeneo de produtos de afiliado"},
+    "trynyth": {"motivo": "provavel dispositivo vestivel de resfriamento ou suplemento (rodou antes como TryWaft com ganchos de bpm/suplemento), nao sleepwear"}
+  }
+}
