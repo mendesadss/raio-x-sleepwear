@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diagnóstico Operacional · Serena Sleepwear · 31/07/2026</title>
+<style>
+:root{
+  --bg:#0b0f0d; --bg2:#121712; --card:#141a15; --line:#22291f;
+  --tx:#eef2ec; --dim:#b9c2b6; --dim2:#7c877a;
+  --acc:#96BF48; --acc-ink:#0b0f0d;
+  --red:#f0554a; --red-bg:rgba(240,85,74,.10); --red-line:rgba(240,85,74,.35);
+  --amb:#e8a23a; --amb-bg:rgba(232,162,58,.10); --amb-line:rgba(232,162,58,.35);
+  --ylw:#e0d24a; --ylw-bg:rgba(224,210,74,.10); --ylw-line:rgba(224,210,74,.35);
+  --blu:#5aa7d6; --blu-bg:rgba(90,167,214,.10); --blu-line:rgba(90,167,214,.35);
+  --grn-bg:rgba(150,191,72,.10); --grn-line:rgba(150,191,72,.35);
+}
+:root[data-theme="light"]{
+  --bg:#f7f9f5; --bg2:#ffffff; --card:#ffffff; --line:#e2e7dd;
+  --tx:#171d15; --dim:#4a5346; --dim2:#727d6e;
+  --acc:#5c8a1e; --acc-ink:#ffffff;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f7f9f5; --bg2:#ffffff; --card:#ffffff; --line:#e2e7dd;
+    --tx:#171d15; --dim:#4a5346; --dim2:#727d6e;
+    --acc:#5c8a1e; --acc-ink:#ffffff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
+body{line-height:1.6;font-size:15.5px}
+h1,h2,h3{font-family:inherit;font-weight:800;letter-spacing:-.01em}
+a{color:var(--acc)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .row{display:flex;align-items:center;gap:14px;padding:12px 20px;max-width:980px;margin:0 auto;flex-wrap:wrap}
+.topbar .brand{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);white-space:nowrap}
+.topbar nav{display:flex;gap:4px;flex-wrap:wrap;font-size:12.5px}
+.topbar nav a{color:var(--dim);text-decoration:none;padding:5px 9px;border-radius:6px;white-space:nowrap}
+.topbar nav a:hover{background:var(--card);color:var(--tx)}
+
+header.hero{padding:44px 0 8px}
+.tag{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--dim);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:99px;font-weight:700}
+h1.title{font-size:clamp(26px,4.2vw,38px);margin:16px 0 8px;line-height:1.12}
+.sub{color:var(--dim);font-size:16px;max-width:760px}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px;font-size:12.5px;color:var(--dim2)}
+.meta-row span{background:var(--card);border:1px solid var(--line);padding:5px 10px;border-radius:7px}
+
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+h2.h{font-size:21px;margin:0 0 6px;display:flex;align-items:baseline;gap:10px}
+h2.h .n{font-size:12px;font-weight:800;color:var(--acc-ink);background:var(--acc);width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+p.lead{color:var(--dim);margin:6px 0 18px;max-width:760px}
+h3{font-size:15.5px;margin:22px 0 8px}
+
+/* stat grid */
+.grid{display:grid;gap:12px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:720px){.g4,.g3,.g2{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.g4,.g3,.g2{grid-template-columns:1fr 1fr}}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+.stat .v{font-size:24px;font-weight:800;line-height:1.15}
+.stat .v.sm{font-size:16px}
+.stat .l{font-size:12px;color:var(--dim);margin-top:4px}
+.stat .d{font-size:11px;color:var(--dim2);margin-top:3px}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.card h4{margin:0 0 6px;font-size:15px}
+.card p{color:var(--dim);font-size:13.8px;margin:0}
+
+/* tables */
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13.6px;min-width:520px}
+th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--dim2);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+td{color:var(--dim)}
+td.strong{color:var(--tx);font-weight:700}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums}
+
+/* notes */
+.note{border-radius:12px;padding:14px 16px;font-size:14px;border:1px solid var(--line);background:var(--card);color:var(--dim)}
+.note b{color:var(--tx)}
+.note.danger{background:var(--red-bg);border-color:var(--red-line)}
+.note.warn{background:var(--amb-bg);border-color:var(--amb-line)}
+.note.info{background:var(--blu-bg);border-color:var(--blu-line)}
+.note.good{background:var(--grn-bg);border-color:var(--grn-line)}
+
+/* severity badges */
+.sev{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:99px;flex:none}
+.sev.critico{background:var(--red-bg);color:var(--red);border:1px solid var(--red-line)}
+.sev.alto{background:var(--amb-bg);color:var(--amb);border:1px solid var(--amb-line)}
+.sev.medio{background:var(--ylw-bg);color:var(--ylw);border:1px solid var(--ylw-line)}
+.sev.baixo{background:var(--blu-bg);color:var(--blu);border:1px solid var(--blu-line)}
+
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12px;color:var(--dim2);align-items:center;margin:12px 0 0}
+.legend .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px}
+
+/* finding card */
+.finding{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:16px 18px;margin-bottom:12px}
+.finding .fh{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.finding h4{margin:0;font-size:15.5px}
+.finding p{color:var(--dim);font-size:13.8px;margin:6px 0}
+.finding .impact{font-size:12.8px;color:var(--dim2);border-top:1px dashed var(--line);margin-top:10px;padding-top:9px}
+
+.pill{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;padding:4px 10px;border-radius:99px;text-transform:uppercase}
+.p-a{background:var(--grn-bg);color:var(--acc);border:1px solid var(--grn-line)}
+.p-c{background:var(--red-bg);color:var(--red);border:1px solid var(--red-line)}
+.p-i{background:var(--blu-bg);color:var(--blu);border:1px solid var(--blu-line)}
+.p-b{background:var(--amb-bg);color:var(--amb);border:1px solid var(--amb-line)}
+
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:20px}
+.tstep{position:relative;padding-bottom:20px}
+.tstep:last-child{padding-bottom:0}
+.tstep::before{content:'';position:absolute;left:-25px;top:3px;width:10px;height:10px;border-radius:50%;background:var(--acc);border:2px solid var(--bg)}
+.tstep .td{font-size:11.5px;color:var(--dim2);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.tstep .tt{font-size:14.5px;color:var(--tx);margin:2px 0 3px;font-weight:600}
+.tstep .tx{font-size:13.5px;color:var(--dim)}
+
+.imgbox{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.imgbox img{width:100%;display:block}
+figcaption{font-size:12px;color:var(--dim2);margin-top:7px;text-align:center}
+
+footer{color:var(--dim2);font-size:12px;padding:30px 0 60px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--acc);color:var(--acc-ink);width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.25);opacity:.92;z-index:60}
+code{background:var(--bg2);border:1px solid var(--line);padding:1px 6px;border-radius:5px;font-size:12.5px}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:20px}
+.toc b{display:block;font-size:11.5px;color:var(--dim2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.toc ol{margin:0;padding-left:18px;font-size:13.8px;color:var(--dim)}
+.toc li{margin-bottom:6px}
+.toc a{color:var(--dim);text-decoration:none}
+.toc a:hover{color:var(--acc)}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="row">
+<span class="brand">Diagnóstico · Serena Sleepwear</span>
+<nav>
+<a href="#resumo">Resumo</a>
+<a href="#dados">Os dados</a>
+<a href="#achados">Gargalos</a>
+<a href="#raiox">Raio-X anterior</a>
+<a href="#nicho">Nicho: iniciante?</a>
+<a href="#plano">Plano de ação</a>
+</nav>
+</div></div>
+
+<div class="wrap">
+
+<header class="hero" id="topo">
+<span class="tag">Auditoria operacional · uso interno · 31/07/2026</span>
+<h1 class="title">Serena Sleepwear: por que zero venda, e o que fazer antes de trocar de nicho</h1>
+<p class="sub">Cruzamento de Shopify Analytics, Meta Ads Manager e Microsoft Clarity (27 a 30/07/2026) com o raio-x de mercado já publicado (09 a 24/07/2026). Objetivo: separar o que é problema de <b>nicho</b> do que é problema de <b>execução</b>, e dar um veredito honesto sobre nível de dificuldade para um mentorado iniciante.</p>
+<div class="meta-row">
+<span>Loja: serenasleepwear.com</span>
+<span>Janela nova: 27 a 30/07/2026 (4 dias)</span>
+<span>Investido no período: R$ 182,88</span>
+<span>Vendas no período: 0</span>
+<span>Fontes: Shopify Analytics, Meta Ads, Microsoft Clarity, site ao vivo</span>
+</div>
+
+<div class="toc">
+<b>Neste diagnóstico</b>
+<ol>
+<li><a href="#resumo">Resumo executivo (o veredito em 30 segundos)</a></li>
+<li><a href="#dados">Os dados crus: Shopify, Meta Ads e Clarity</a></li>
+<li><a href="#achados">Os gargalos, ranqueados por gravidade</a></li>
+<li><a href="#raiox">O que o raio-x de 24/07 recomendou, e o que foi seguido</a></li>
+<li><a href="#nicho">A pergunta central: esse nicho é para um iniciante?</a></li>
+<li><a href="#plano">Plano de ação imediato</a></li>
+</ol>
+</div>
+</header>
+
+<section id="resumo">
+<h2 class="h"><span class="n">01</span>Resumo executivo</h2>
+<p class="lead">Se você só vai ler um parágrafo, leia este.</p>
+<div class="note danger" style="font-size:15px">
+<b>O teste dos últimos 4 dias não prova nada sobre o nicho, porque ele estava tecnicamente quebrado.</b> O anúncio pago levava para uma página de produto que não existe mais (erro 404). Das poucas sessões humanas reais que o próprio Clarity conseguiu confirmar no período, as vindas de tráfego pago dos EUA caíram exatamente nesse link morto. R$ 182,88 foram gastos sem chance nenhuma de vender, não porque o mercado recusou a oferta, mas porque a oferta nunca chegou a ser vista por quem clicou.
+</div>
+<div class="grid g3" style="margin-top:14px">
+<div class="stat"><div class="v" style="color:var(--red)">404</div><div class="l">Página de destino do anúncio ativo</div><div class="d">produto removido do catálogo</div></div>
+<div class="stat"><div class="v" style="color:var(--amb)">R$547</div><div class="l">CPM pago</div><div class="d">~10x o benchmark do nicho (US$9-12)</div></div>
+<div class="stat"><div class="v" style="color:var(--blu)">75/76</div><div class="l">Sessões marcadas como bot pelo Clarity</div><div class="d">amostra real é pequena demais pra concluir</div></div>
+</div>
+<p style="margin-top:18px">Minha opinião direta, depois de olhar os números de dentro e o mercado por fora: <b>o nicho sleepwear com ângulo de condição (calor noturno, menopausa) segue validado como nível iniciante</b>, com molde replicável (Lusome), margem de 41% mesmo pagando o CPA do setor, e orçamento de teste baixo (US$ 210 a 280). O que não está validado é a execução da Serena até aqui: ela ainda não rodou esse teste do jeito certo. Antes de considerar trocar de nicho, existe um teste limpo de 7 dias que ainda não foi feito. A recomendação está detalhada na seção <a href="#nicho">05</a> e o passo a passo na seção <a href="#plano">06</a>.</p>
+</section>
+
+<section id="dados">
+<h2 class="h"><span class="n">02</span>Os dados crus (27 a 30/07/2026)</h2>
+<p class="lead">Três fontes, lidas separadamente antes de qualquer conclusão. Nenhum número aqui é estimado: são as próprias telas do Shopify, do gerenciador de anúncios e do Clarity.</p>
+
+<h3>Shopify Analytics</h3>
+<div class="grid g4">
+<div class="stat"><div class="v">120</div><div class="l">Sessões</div><div class="d">−3% vs período anterior</div></div>
+<div class="stat"><div class="v" style="color:var(--red)">0%</div><div class="l">Taxa de conversão</div></div>
+<div class="stat"><div class="v" style="color:var(--red)">0</div><div class="l">Adicionados ao carrinho</div></div>
+<div class="stat"><div class="v" style="color:var(--red)">0</div><div class="l">Checkouts iniciados / pedidos</div></div>
+</div>
+<div class="tblwrap" style="margin-top:14px"><table><thead><tr><th>Dispositivo</th><th class="num">Sessões</th><th>Variação</th></tr></thead><tbody>
+<tr><td class="strong">Desktop</td><td class="num">76 (63%)</td><td>↘29%</td></tr>
+<tr><td class="strong">Celular</td><td class="num">40 (33%)</td><td>↗150%</td></tr>
+<tr><td class="strong">Tablet</td><td class="num">3</td><td>↗200%</td></tr>
+<tr><td class="strong">Outro</td><td class="num">1</td><td>-</td></tr>
+</tbody></table></div>
+<p style="color:var(--dim2);font-size:12.8px;margin-top:8px">63% desktop é atípico para tráfego de anúncio em rede social, que costuma ser majoritariamente mobile. É o primeiro sinal (não a prova) de que parte do que o Shopify chama de "sessão" não é um comprador em potencial navegando pelo celular.</p>
+
+<h3>Sessões por localização e origem</h3>
+<div class="tblwrap"><table><thead><tr><th>Local</th><th>Origem</th><th class="num">Sessões (27-30/07)</th><th class="num">Período anterior (23-26/07)</th></tr></thead><tbody>
+<tr><td class="strong">Council Bluffs, Iowa</td><td>Direto / nenhum</td><td class="num">17 ↘82%</td><td class="num" style="color:var(--amb)">105</td></tr>
+<tr><td class="strong">Dallas, Texas</td><td>Direto / nenhum</td><td class="num">27 ↗440%</td><td class="num">5</td></tr>
+<tr><td class="strong">Prineville, Oregon</td><td>Social · facebook</td><td class="num">7</td><td class="num">0</td></tr>
+<tr><td class="strong">Boardman, Oregon</td><td>Pesquisa · google</td><td class="num">5</td><td class="num">0</td></tr>
+<tr><td class="strong">Fort Worth, Texas</td><td>Social · facebook</td><td class="num">5</td><td class="num">0</td></tr>
+</tbody></table></div>
+<div class="note warn" style="margin-top:12px"><b>Ponto de atenção, não certeza absoluta:</b> Council Bluffs (Iowa), Boardman e Prineville (Oregon) são cidades conhecidas por concentrar datacenters de nuvem de grandes empresas de tecnologia (Google, Meta, entre outras). Uma cidade de ~62 mil habitantes gerando 105 sessões "diretas" em 4 dias é um padrão mais compatível com tráfego automatizado (crawler, bot, scraper) do que com consumidoras reais. Isso é consistente com o próprio alerta do Clarity abaixo: não é uma prova fechada, mas é motivo suficiente para não confiar cegamente no número de "120 sessões".</div>
+
+<h3>Sessões por página de destino</h3>
+<div class="tblwrap"><table><thead><tr><th>Página</th><th class="num">Sessões</th><th>Variação</th><th>Status hoje (31/07)</th></tr></thead><tbody>
+<tr><td class="strong">/products/camille-pajama-set</td><td class="num">38</td><td>-</td><td><span class="pill p-c">404 · removido</span></td></tr>
+<tr><td class="strong">Homepage /</td><td class="num">28</td><td>↘72%</td><td><span class="pill p-a">ok</span></td></tr>
+<tr><td>/products/margot-pajama-set</td><td class="num">6</td><td>↗500%</td><td><span class="pill p-a">ok</span></td></tr>
+<tr><td>/collections/serena-air</td><td class="num">5</td><td>-</td><td><span class="pill p-a">ok</span></td></tr>
+<tr><td>/products/breeze-sheet-set</td><td class="num">5</td><td>-</td><td><span class="pill p-a">ok</span></td></tr>
+<tr><td>/products/odette-pajama-set</td><td class="num">4</td><td>-</td><td><span class="pill p-a">ok</span></td></tr>
+<tr><td>/products/luna-short-set</td><td class="num">4</td><td>-</td><td><span class="pill p-i">verificar</span></td></tr>
+<tr><td>/products/blair-pajama-set</td><td class="num">4</td><td>-</td><td><span class="pill p-c">não encontrado</span></td></tr>
+<tr><td>/products/rosalie-nightdress</td><td class="num">2</td><td>↗100%</td><td><span class="pill p-c">não encontrado</span></td></tr>
+<tr><td>/products/celeste-nightdress</td><td class="num">2</td><td>-</td><td><span class="pill p-i">verificar</span></td></tr>
+</tbody></table></div>
+<p style="color:var(--dim2);font-size:12.8px;margin-top:8px">A página mais visitada do período inteiro (38 sessões, quase 1 em cada 3) era exatamente a que hoje devolve erro 404. E ao menos mais 3 produtos vistos nesse relatório (Blair, Rosalie e as "Sold-through" abaixo: Aurora, Nina, Claire, Eve) já não constam no catálogo ativo verificado em 31/07. Isso indica um catálogo trocando de nome/produto com frequência alta, sem processo de checagem dos links que já estão rodando em anúncio.</p>
+
+<h3>Meta Ads Manager (extraído do relatório de campanhas do usuário)</h3>
+<div class="tblwrap"><table><thead><tr><th>Campanha</th><th>Status</th><th class="num">Gasto</th><th class="num">Impressões</th><th class="num">Cliques no link</th><th class="num">Add to cart / Compras</th></tr></thead><tbody>
+<tr><td>[CP Reconhecimento] IMAGEM [02/07]</td><td>inativa</td><td class="num">R$ 0</td><td class="num">0</td><td class="num">0</td><td class="num">0 / 0</td></tr>
+<tr><td>[CP] Aquecimento - Fase 2 - Tráfego</td><td>inativa</td><td class="num">R$ 0</td><td class="num">0</td><td class="num">0</td><td class="num">0 / 0</td></tr>
+<tr><td>[CP] CONVERSÃO - 14/07 - TESTE 1</td><td>inativa</td><td class="num">R$ 0</td><td class="num">0</td><td class="num">0</td><td class="num">0 / 0</td></tr>
+<tr><td class="strong">[CP] CONV 27/07 - NOVOS CRIATIVOS</td><td>inativa no momento da extração</td><td class="num strong">R$ 182,88</td><td class="num">334</td><td class="num">33</td><td class="num" style="color:var(--red)">0 / 0</td></tr>
+</tbody></table></div>
+<div class="grid g4" style="margin-top:12px">
+<div class="stat"><div class="v sm">CPM</div><div class="l">R$ 547,54 <span style="color:var(--dim2)">(≈US$ 101)</span></div><div class="d">benchmark do setor: US$9-12</div></div>
+<div class="stat"><div class="v sm">CTR</div><div class="l" style="color:var(--acc)">10,48%</div><div class="d">ótimo, acima da média do setor</div></div>
+<div class="stat"><div class="v sm">CPC (link)</div><div class="l">R$ 5,54 <span style="color:var(--dim2)">(≈US$ 1,03)</span></div><div class="d">benchmark do setor: US$0,45-0,70</div></div>
+<div class="stat"><div class="v sm">Orçamento</div><div class="l">R$ 50/dia</div><div class="d">baixo p/ sair da fase de aprendizado</div></div>
+</div>
+<div class="note good" style="margin-top:12px"><b>Um ponto a favor da Serena, para não jogar tudo fora:</b> o CTR de 10,48% é alto, o criativo está chamando atenção e gerando clique de verdade. O problema medido aqui não é "o criativo é ruim", é "o clique caiu num link morto e o CPM saiu caro". São coisas concertáveis, não um veredito sobre o gosto do criativo.</div>
+
+<h3>Microsoft Clarity (comportamento real na página)</h3>
+<div class="grid g4">
+<div class="stat"><div class="v">76</div><div class="l">Sessões totais</div></div>
+<div class="stat"><div class="v" style="color:var(--red)">75</div><div class="l">Marcadas como bot pelo próprio Clarity</div></div>
+<div class="stat"><div class="v">71/100</div><div class="l">Score de performance</div></div>
+<div class="stat"><div class="v" style="color:var(--amb)">6,2s</div><div class="l">LCP (carregamento do maior elemento)</div><div class="d">acima de 4s é considerado ruim</div></div>
+</div>
+<p style="margin-top:14px">Das 5 gravações de sessão que sobraram como potencialmente reais, o padrão é este:</p>
+<div class="timeline">
+<div class="tstep"><div class="td">28/07 · 19:51 · iOS · Instagram (app) · Estados Unidos</div><div class="tt">Clique pago → /products/camille-pajama-set</div><div class="tx">28 segundos de sessão, 1 página, 0 cliques na página. Foi direto para o link que hoje é 404.</div></div>
+<div class="tstep"><div class="td">28/07 · 19:51 · iOS · Instagram (app) · Estados Unidos</div><div class="tt">Clique pago → /products/camille-pajama-set</div><div class="tx">1 segundo de sessão. Mesmo link morto, saída imediata.</div></div>
+<div class="tstep"><div class="td">28/07 · 08:23 · iOS · Facebook (app) · Estados Unidos</div><div class="tt">Clique pago → /products/camille-pajama-set</div><div class="tx">20 minutos e 38 segundos registrados (provavelmente app em segundo plano, não leitura ativa). Mesmo link morto.</div></div>
+<div class="tstep"><div class="td">27/07 · 11:42 · iOS · Chrome mobile · Brasil</div><div class="tt">/products/breeze-sheet-set → home</div><div class="tx">5 minutos, 2 páginas, 0 cliques. Sessão do Brasil, fora do avatar-alvo (EUA).</div></div>
+<div class="tstep"><div class="td">27/07 · 11:42 · iOS · Chrome mobile · Brasil</div><div class="tt">/products/margot-pajama-set</div><div class="tx">18 segundos, 2 páginas, 1 clique. Também Brasil.</div></div>
+</div>
+<div class="note danger" style="margin-top:16px"><b>A prova mais direta do problema:</b> das 5 sessões que o Clarity não descartou como bot, as 3 que vieram de tráfego pago dos Estados Unidos (as que a Serena pagou para trazer) bateram todas no mesmo link morto. Nenhuma delas teve chance de ver o produto, o preço ou a oferta. E 2 das 5 sessões "reais" nem eram do público-alvo: eram do Brasil.</div>
+</section>
+
+<section id="achados">
+<h2 class="h"><span class="n">03</span>Os gargalos, ranqueados por gravidade</h2>
+<p class="lead">Cada item abaixo foi confirmado nos dados ou no site ao vivo, não é suposição.</p>
+<div class="legend">
+<span><span class="dot" style="background:var(--red)"></span>Crítico: já está custando dinheiro agora</span>
+<span><span class="dot" style="background:var(--amb)"></span>Alto: limita a conversão mesmo quando tudo o mais funciona</span>
+<span><span class="dot" style="background:var(--ylw)"></span>Médio: encarece ou distorce a leitura</span>
+<span><span class="dot" style="background:var(--blu)"></span>Baixo: vale corrigir, não é o que está matando a venda</span>
+</div>
+
+<div class="finding" style="margin-top:18px">
+<div class="fh"><h4>1. Anúncio ativo apontava para uma página de produto que não existe mais</h4><span class="sev critico">Crítico</span></div>
+<p>O produto mais clicado do período (camille-pajama-set, 38 sessões, o destino do anúncio pago) devolve erro 404 hoje. Confirmado direto no servidor: <code>HTTP 404</code>.</p>
+<div class="impact">Impacto: sozinho, explica boa parte dos R$ 182,88 gastos sem nenhuma venda. Quem clicou no anúncio caiu numa página de erro, não teve chance de comprar.</div>
+</div>
+
+<div class="finding">
+<div class="fh"><h4>2. Catálogo com rotatividade alta demais para o tamanho da operação</h4><span class="sev critico">Crítico</span></div>
+<p>Pelo menos 6 produtos vistos nos relatórios de 27-30/07 (Camille, Blair, Rosalie, Aurora, Nina, Claire, Eve) não constam mais no catálogo ativo verificado hoje. Produtos somem ou trocam de nome sem checar se algum anúncio ainda aponta para eles.</p>
+<div class="impact">Impacto: qualquer campanha nova corre o risco de repetir o erro 1. Antes de subir um anúncio, o link de destino precisa ser testado manualmente.</div>
+</div>
+
+<div class="finding">
+<div class="fh"><h4>3. O pivô de ângulo recomendado em 24/07 foi feito pela metade</h4><span class="sev alto">Alto</span></div>
+<p>O headline atual da home é <b>"Crafted for Your Best Sleep"</b>, com menção a "wake up feeling too warm, uncomfortable, or restless". Já é melhor que o ângulo puramente estético de antes ("Ordinary Night, Elevated"), mas ainda não nomeia a condição clínica (calor noturno, menopausa, night sweats) do jeito direto que a Lusome faz ("Cooling for Menopausal Night Sweats"). É um meio-termo, e meio-termo nesse tipo de ângulo tende a não converter nem melhor nem pior, apenas mais devagar.</p>
+<div class="impact">Impacto: o teste atual não valida nem invalida a tese do raio-x, porque a tese ainda não foi aplicada por completo.</div>
+</div>
+
+<div class="finding">
+<div class="fh"><h4>4. Produto esgotado ainda permite adicionar ao carrinho</h4><span class="sev alto">Alto</span></div>
+<p>Na página do Margot Pajama Set, o status mostrado é "Sold out", mas o botão de compra continua ativo e permite interação, o que gera confusão sobre disponibilidade real e risco de pedido que não pode ser cumprido.</p>
+<div class="impact">Impacto: quebra de confiança na hora exata da decisão de compra, e risco operacional se alguém conseguir finalizar a compra mesmo assim.</div>
+</div>
+
+<div class="finding">
+<div class="fh"><h4>5. CPM aproximadamente 10x acima do benchmark do nicho</h4><span class="sev medio">Médio</span></div>
+<p>R$ 547,54 de CPM medido (≈US$ 101) contra US$ 9 a 12 do benchmark Fashion/Apparel usado no próprio raio-x. Orçamento diário de R$ 50 é baixo para o algoritmo do Meta sair rápido da fase de aprendizado, o que tende a manter o CPM caro por mais tempo.</p>
+<div class="impact">Impacto: mesmo se o link estivesse certo, cada clique estava saindo caro (≈US$1,03), o que aperta a margem já apertada do setor.</div>
+</div>
+
+<div class="finding">
+<div class="fh"><h4>6. Métricas de tráfego contaminadas por tráfego não humano</h4><span class="sev medio">Médio</span></div>
+<p>75 de 76 sessões marcadas como bot pelo Clarity, com picos de sessão em cidades associadas a datacenters de nuvem (ver seção 02). O número de "120 sessões" do Shopify Analytics não deve ser usado como termômetro de interesse real do público.</p>
+<div class="impact">Impacto: decisões tomadas em cima de "sessões" do Shopify nessa escala pequena podem estar erradas. Usar cliques e gasto do Meta Ads Manager como referência mais confiável até o volume crescer.</div>
+</div>
+
+<div class="finding">
+<div class="fh"><h4>7. Performance de página e poluição visual</h4><span class="sev baixo">Baixo</span></div>
+<p>LCP de 6,2 segundos (a referência de "bom" é abaixo de 2,5s), e um banner promocional que se repete cerca de 10 vezes na mesma página de produto, gerando poluição visual.</p>
+<div class="impact">Impacto: some pontos de conversão, mas não é o que explica zero venda. Vale corrigir depois dos itens acima.</div>
+</div>
+
+<div class="finding">
+<div class="fh"><h4>8. Parte da amostra "real" nem é do público-alvo</h4><span class="sev baixo">Baixo</span></div>
+<p>2 das 5 sessões que o Clarity não descartou como bot vieram do Brasil (prováveis testes internos), não dos Estados Unidos.</p>
+<div class="impact">Impacto: reforça que a amostra de comportamento real de consumidora americana, nesses 4 dias, é próxima de zero. Ainda não dá para tirar conclusão sobre gosto do avatar.</div>
+</div>
+</section>
+
+<section id="raiox">
+<h2 class="h"><span class="n">04</span>O que o raio-x de 24/07 recomendou, e o que foi seguido</h2>
+<p class="lead">A Serena já tinha um plano de ação detalhado (ver <a href="loja-serena.html">ficha da loja</a> e <a href="plano-de-acao.html">plano de ação</a> completos). Este é o placar real de execução.</p>
+<div class="tblwrap"><table><thead><tr><th>Recomendação de 24/07</th><th>Status em 31/07</th></tr></thead><tbody>
+<tr><td>Reformar a página no ângulo de condição antes de religar a mídia</td><td><span class="pill p-b">parcial</span> headline mudou, mas sem nomear a condição clínica</td></tr>
+<tr><td>Zerar os compare_at_price de custo expostos no código</td><td><span class="pill p-i">não verificado nesta rodada</span></td></tr>
+<tr><td>Pixel com evento de compra e CAPI validados antes de escalar</td><td><span class="pill p-i">não verificado nesta rodada</span>, mas 0 compras no período impede validar</td></tr>
+<tr><td>Religar a mídia só depois da reforma, na semana 3</td><td><span class="pill p-c">não seguido</span> mídia religou (27/07) com o pivô ainda incompleto</td></tr>
+<tr><td>Entrar pelo pijama, escalar depois para roupa de cama</td><td><span class="pill p-a">seguido</span> catálogo ainda é 100% pijama/camisola, breeze-sheet-set é o único item de cama</td></tr>
+<tr><td>Testar 1 conjunto, EUA, mulher 40-58, US$30-40/dia, por 7 dias</td><td><span class="pill p-c">não seguido</span> orçamento de R$50/dia (≈US$9), abaixo do recomendado, e o link de destino quebrado invalida a leitura</td></tr>
+</tbody></table></div>
+<div class="note info" style="margin-top:14px">Nenhuma das conclusões do raio-x de mercado (nicho ESCALANDO, ângulo cooling/condição validado, Lusome como molde de nível iniciante) foi contrariada pelos dados novos. O que os dados novos mostram é que a <b>execução</b> ainda não testou essa tese de verdade.</div>
+</section>
+
+<section id="nicho">
+<h2 class="h"><span class="n">05</span>A pergunta central: esse nicho é para um iniciante?</h2>
+<p class="lead">Respondendo com a experiência de quem já rodou oferta em dropshipping global em escala grande, sem meias palavras.</p>
+
+<div class="grid g2">
+<div class="card"><h4 style="color:var(--red)">Sleepwear de estética pura (o que a Serena vendia até aqui)</h4><p><b>Ruim para iniciante.</b> Sem mecanismo, sem urgência (é compra adiável), competindo por cima com marca estabelecida e por baixo com SHEIN. Isso não é uma opinião nova, é o que os próprios dados de 12 dias e R$ 344 sem venda já tinham mostrado antes desta rodada.</p></div>
+<div class="card"><h4 style="color:var(--acc)">Sleepwear com ângulo de condição (cooling / menopausa, molde Lusome)</h4><p><b>Validado como nível iniciante pelo próprio mercado.</b> Dropship simples (fornecedor no AliExpress), margem de 41% mesmo pagando o CPA cheio do setor, orçamento de teste baixo (US$210-280), e uma loja pequena (Lusome, ~US$9 mil/mês) provando que o molde fecha sem precisar de escala grande.</p></div>
+</div>
+
+<div class="note warn" style="margin-top:16px"><b>A ressalva que preciso ser honesto sobre:</b> "nível iniciante" no scorecard do raio-x mede facilidade de <i>operação</i> (sourcing simples, ticket que fecha, criativo fácil de produzir). Não mede facilidade de <i>copy</i>. Vender para uma mulher de 44-58 anos em menopausa exige nomear uma condição clínica específica, apresentar um mecanismo com prova e construir uma ponte de presente, isso é mais sofisticado de escrever bem do que nichos de dor física óbvia e visual (por exemplo, os raio-x de postura ou dor no joelho já levantados neste workspace, onde o "antes e depois" se explica sozinho). Isso não desqualifica o nicho, mas explica por que a execução emperrou: o mentorado ainda está aprendendo a operação básica de loja (o item 1 desta ficha é um erro de iniciante clássico, não de nicho) e, ao mesmo tempo, tentando escrever um ângulo de copy que pede mais maturidade.</div>
+
+<h3>Meu veredito</h3>
+<div class="note danger" style="font-size:15.5px">
+<b>Não troque de nicho ainda.</b> Os dados desses 4 dias não testam a tese "cooling/menopausa vende", testam apenas "um anúncio com link quebrado não vende", o que já se sabia sem precisar gastar um real. Antes de decidir trocar de nicho, existe um teste que ainda não foi feito: 7 dias, ângulo migrado por completo (não pela metade), sem bugs de link ou de estoque, com os critérios de corte que já estavam no plano de ação (adição ao carrinho ≥3%, CPA ≤US$35, rolagem ≥50%). Isso custa entre US$210 e US$280, menos do que já foi gasto até aqui sem essa clareza. <b>Se, com um teste limpo de verdade, ainda assim não vender nenhuma unidade em 7 dias</b>, aí sim a leitura muda: não necessariamente porque o nicho é ruim, mas porque a distância entre o nível de copy que esse avatar exige e o nível atual do mentorado é grande demais para o momento dele, e faria sentido migrar para um nicho de dor mais auto-evidente antes de voltar para um ângulo tão dependente de comunicação fina.
+</div>
+</section>
+
+<section id="plano">
+<h2 class="h"><span class="n">06</span>Plano de ação imediato</h2>
+<p class="lead">Em ordem. Os 3 primeiros itens custam zero e menos de um dia de trabalho, e sem eles nenhum teste novo tem validade.</p>
+<div class="tblwrap"><table><thead><tr><th>#</th><th>Ação</th><th>Prazo</th></tr></thead><tbody>
+<tr><td class="num">1</td><td>Pausar qualquer anúncio que aponte para produto removido. Conferir manualmente, clicando, todo link ativo antes de gastar mais verba.</td><td>Hoje</td></tr>
+<tr><td class="num">2</td><td>Corrigir o botão de compra do produto esgotado (Margot): ou repor estoque, ou desativar o botão com aviso claro.</td><td>Hoje</td></tr>
+<tr><td class="num">3</td><td>Terminar o pivô de ângulo: trocar "Crafted for Your Best Sleep" por um hook que nomeie a condição, no molde já mapeado no plano de ação (ex.: acordar suando às 3 da manhã, calor da menopausa).</td><td>Esta semana</td></tr>
+<tr><td class="num">4</td><td>Congelar o catálogo por 30 dias: manter os produtos que já estão rodando, parar de trocar nome/produto sem necessidade.</td><td>Esta semana</td></tr>
+<tr><td class="num">5</td><td>Rodar o teste limpo: 1 conjunto de anúncio, EUA, mulher 40-58, US$30-40/dia, 7 dias corridos, critério de corte definido antes de começar (adição ao carrinho ≥3%, CPA ≤US$35).</td><td>Próxima semana</td></tr>
+<tr><td class="num">6</td><td>Nesses 7 dias, ignorar o número de "sessões" do Shopify Analytics como termômetro. Acompanhar cliques e gasto direto no Meta Ads Manager.</td><td>Durante o teste</td></tr>
+<tr><td class="num">7</td><td>Ao final dos 7 dias: vendeu e bateu o critério, escalar o vencedor. Não vendeu mesmo com tudo corrigido, essa é a hora de reabrir a conversa sobre trocar de nicho, com dado limpo na mão.</td><td>Fim do teste</td></tr>
+</tbody></table></div>
+</section>
+
+<footer>
+<b style="color:var(--dim)">Fontes usadas nesta análise:</b> Shopify Analytics (prints do painel, 27-30/07/2026), relatório de campanhas do Meta Ads Manager (arquivo .numbers, 27-30/07/2026), Microsoft Clarity (métricas e gravações de sessão, 27-30/07/2026), site ao vivo serenasleepwear.com (verificado em 31/07/2026 via requisição direta e leitura de página), e o raio-x de nicho Sleepwear US já publicado (<a href="index.html">painel</a>, <a href="loja-serena.html">ficha Serena</a>, <a href="estrategia.html">estratégia</a>, <a href="plano-de-acao.html">plano de ação</a>, atualizado em 24/07/2026).<br><br>
+<b style="color:var(--dim)">Limitações declaradas:</b> a suspeita de tráfego de datacenter (item 6 dos gargalos) é uma leitura de padrão geográfico, não uma confirmação técnica de fraude. A conversão de R$ para US$ usa câmbio aproximado (~R$5,40) só para permitir comparação com os benchmarks do setor, que são publicados em dólar. Não houve acesso direto ao Meta Ads Manager nem ao admin da Shopify nesta rodada: os números vêm dos prints e do arquivo enviados pelo usuário.<br><br>
+Página gerada em 31/07/2026 para uso interno. Não publicada.
+</footer>
+
+</div>
+
+<a href="#topo" class="totop" title="Voltar ao topo">↑</a>
+
+</body>
+</html>
